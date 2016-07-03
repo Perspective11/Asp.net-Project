@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Home</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="./assets/css/main.css" type="text/css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        This is the master page
+        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script src="./bower_components/jquery/dist/jquery.min.js" ></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" ></script>
+    <script src="./bower_components/respond/respond.min.js"></script>
+    <script src="./bower_components/wow/dist/wow.min.js"></script>
+    <script src="./assets/js/functions.js"></script>
+</body>
+</html>
