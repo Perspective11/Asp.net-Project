@@ -10,9 +10,17 @@
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css"/>
 </head>
 <body>
+    <nav id="mainNav">
+        <div><span class="fa fa-code fa-2x"></span> Aiman N</div>
+        <ul>
+            <li><a href="Index.aspx">Home</a></li>
+            <li><a href="Contact.aspx">Contact Us</a></li>
+            <li><a href="About.aspx">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
     <form id="form1" runat="server">
     <div>
-        This is the master page hello
         <asp:ContentPlaceHolder id="MainContent" runat="server">
         
         </asp:ContentPlaceHolder>
