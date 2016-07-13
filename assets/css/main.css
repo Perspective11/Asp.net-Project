@@ -10520,7 +10520,7 @@ button.close {
   animation-name: slideOutUp; }
 
 body {
-  background-color: lightyellow;
+  background-color: white;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -10529,7 +10529,7 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 ::selection {
-  background: #FFF498; }
+  background: #542537; }
 
 img::selection {
   background: transparent; }
@@ -10538,7 +10538,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #FFF498; }
+  -webkit-tap-highlight-color: #542537; }
 
 a {
   color: #0074D9;
@@ -10636,27 +10636,37 @@ input[type="button"] {
 nav#mainNav {
   margin: 10px 10px 0 10px;
   border-radius: 10px;
-  background: #d4ebf2;
-  border: solid 3px white; }
+  position: relative;
+  background: #AE93FF; }
   nav#mainNav ul li:hover {
-    background: #ff3333;
+    background: #FF4300;
     color: white;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
   nav#mainNav div {
-    color: teal;
-    display: inline;
-    margin: 10px 40px 0px 10px;
-    font-size: 20px; }
+    color: white;
+    position: relative;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    left: 3%;
+    line-height: 40px;
+    display: inline-block;
+    width: 30%;
+    padding: 10px 40px 0px 10px;
+    border-radius: 5px;
+    border: solid 3px white;
+    font-size: 15px;
+    background-color: #FF4300; }
   nav#mainNav ul {
     float: right;
     list-style-type: none; }
     nav#mainNav ul li {
+      line-height: 2.5;
       float: left;
       border-radius: 10px;
-      color: black;
+      color: white;
       margin: 0 5px;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }

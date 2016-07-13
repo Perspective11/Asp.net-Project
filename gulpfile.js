@@ -22,6 +22,7 @@ gulp.task('browserSync', function () {
 
 gulp.task('sass', function () {
     return gulp.src(['./assets/sass/**/*.sass', './assets/sass/**/*.scss', '!./assets/sass/**/_*.*'])
+      .pipe(plumber({ errorHandler: onError }))
       .pipe(sass())
       .pipe(autoprefixer({
           browsers: ['> 5%'],
@@ -31,6 +32,11 @@ gulp.task('sass', function () {
       .pipe(browserSync.stream());
       
 });
+
+var onError = function (err) {
+    console.log(err);
+    this.emit('end');
+};
 
 
 gulp.task('watch', ['browserSync', 'sass'], function () {

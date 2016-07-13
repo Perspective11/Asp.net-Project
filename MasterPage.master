@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav id="mainNav">
-        <div><span class="fa fa-code fa-2x"></span> Aiman N</div>
+        <div><span class="fa fa-code fa-2x"></span> CodeBlog</div>
         <ul>
             <li><a href="Index.aspx">Home</a></li>
             <li><a href="Contact.aspx">Contact Us</a></li>
