@@ -1,6 +1,6 @@
 /* FONT PATH
  * -------------------------- */
-
+$fa-font-path: "/bower_components/font-awesome/fonts";
 @font-face {
   font-family: 'FontAwesome';
   src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');

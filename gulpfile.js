@@ -33,6 +33,10 @@ gulp.task('sass', function () {
       
 });
 
+gulp.on('err', function (err) {
+    console.log(err);
+});
+
 var onError = function (err) {
     console.log(err);
     this.emit('end');

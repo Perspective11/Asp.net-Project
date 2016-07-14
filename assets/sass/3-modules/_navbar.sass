@@ -1,55 +1,26 @@
 nav#mainNav
-	margin: 10px 10px 0 10px
-	border-radius: 10px
-	position: relative
-	background: $primary
-	//border: solid 3px white
+	//background-color: $primary
+	//color: $secondary
 
-	ul li:hover
-  	background: $secondary
-  	color: white
-  	transition: all 0.2s ease-in-out
-  	transform: scale(1.1)
+	div.container-fluid
+		div.navbar-header
+			button.navbar-toggle
+				span
+			a.navbar-brand
+		div#myNavbar
+			ul.nav
+				li
+					//background-color: purple
+					&.active
+						//background-color: white
+						a
+							//background-color: white
+					&:hover
+							//transform: scale(1.2)
+					a
+						//color: $secondary
 
-	div
-		color: white
-		position: relative
-		transform: scale(1.2)
-		left: 3%
-		line-height: 40px
-		display: inline-block
-		width: 30%
-		padding: 10px 40px 0px 10px
-		border-radius: 5px
-		border: solid 3px white
-		font-size: 15px 
-		background-color: $secondary
-		  
-	ul
-  	float: right
-  	list-style-type: none
-  	li
-  		line-height: 2.5
-  		float: left
-  		border-radius: 10px
-  		color: white
-  		margin: 0 5px
-  		transition: all 0.2s ease-in-out
-  		a
-  			text-decoration: none
-  			color: inherit
-	  		text-align: center
-	  		float: left
-	  		display: block
-	  		padding: 10px 15px
-	  		font-size: 15px
-	  		
-	  		
-
-  
-			
-
-
-   
-
-  		
+						
+			ul.nav.navbar-right
+				li
+					a

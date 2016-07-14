@@ -1,13 +1,13 @@
 {
-	"name": "asp.net",
-	"private": true,
+  "name": "asp.net",
+  "private": true,
   "dependencies": {
     "bootstrap": "3.3.6",
     "modernizer": "2.6.2",
     "respond": "1.2.0",
     "jquery": "2.1.4",
     "wow": "1.1.2",
-    "font-awesome": "4.6.3",
+    "font-awesome": "fontawesome#^4.6.3",
     "bootstrap-sass": "3.3.6"
   }
 }

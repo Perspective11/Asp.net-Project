@@ -28,8 +28,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("/bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3");
+  src: url("/bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2624,8 +2624,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -10520,7 +10520,7 @@ button.close {
   animation-name: slideOutUp; }
 
 body {
-  background-color: white;
+  background-color: #E5E8EAFF;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -10541,11 +10541,11 @@ body {
   -webkit-tap-highlight-color: #542537; }
 
 a {
-  color: #0074D9;
+  color: red;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #40a6ff; }
+    color: #ff6666; }
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
@@ -10632,49 +10632,3 @@ input[type="button"] {
     color: #333;
     border-color: #888;
     outline: 0; }
-
-nav#mainNav {
-  margin: 10px 10px 0 10px;
-  border-radius: 10px;
-  position: relative;
-  background: #AE93FF; }
-  nav#mainNav ul li:hover {
-    background: #FF4300;
-    color: white;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-  nav#mainNav div {
-    color: white;
-    position: relative;
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    left: 3%;
-    line-height: 40px;
-    display: inline-block;
-    width: 30%;
-    padding: 10px 40px 0px 10px;
-    border-radius: 5px;
-    border: solid 3px white;
-    font-size: 15px;
-    background-color: #FF4300; }
-  nav#mainNav ul {
-    float: right;
-    list-style-type: none; }
-    nav#mainNav ul li {
-      line-height: 2.5;
-      float: left;
-      border-radius: 10px;
-      color: white;
-      margin: 0 5px;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-      nav#mainNav ul li a {
-        text-decoration: none;
-        color: inherit;
-        text-align: center;
-        float: left;
-        display: block;
-        padding: 10px 15px;
-        font-size: 15px; }
