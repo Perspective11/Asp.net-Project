@@ -8,6 +8,7 @@
     "jquery": "2.1.4",
     "wow": "1.1.2",
     "font-awesome": "fontawesome#^4.6.3",
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "animate-sass": "^0.6.6"
   }
 }

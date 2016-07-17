@@ -16,7 +16,7 @@
     <nav id="mainNav" class="navbar-fixed-top">
         <div class="">
 
-            <a class="navbar-brand" href="#"><span class="fa fa-code fa-2x"></span>CodeBlog <span id="cursor">_</span></a>
+            <a class="navbar-brand animated" href="#"><span class="fa fa-code fa-2x"></span> CodeBlog <span id="cursor">_</span></a>
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="Index.aspx">Home</a></li>
