@@ -7,6 +7,13 @@
     setInterval(function(){
     	$('.navbar-brand span#cursor').toggleClass('invisible');
     }, 1000);
+
+    $(".title-section").click(function(){ 
+	    //$(".menu-section").collapse('hide');
+	    $(this).addClass('active');
+	    $(this).siblings('li').removeClass('active');
+	
+	});
     
 
 });
