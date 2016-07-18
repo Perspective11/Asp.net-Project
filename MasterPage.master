@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css"/>
@@ -39,40 +40,53 @@
                     </a>
                 </li>
 
-                <li data-toggle="collapse" data-target="#products" class="collapsed title-section active">
+                <li data-toggle="collapse" data-target="#asp" class="collapsed title-section active">
                     <a href="#"><i class="fa fa-gift fa-lg"></i>Asp.net <span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse menu-section" id="products">
+                <ul class="sub-menu collapse menu-section" id="asp">
                     <li class="active"><a href="#">CSS3 Animation</a></li>
-                    <li><a href="#">General</a></li>
-                    <li><a href="#">Buttons</a></li>
-                    <li><a href="#">Tabs & Accordions</a></li>
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">FontAwesome</a></li>
-                    <li><a href="#">Slider</a></li>
-                    <li><a href="#">Panels</a></li>
-                    <li><a href="#">Widgets</a></li>
-                    <li><a href="#">Bootstrap Model</a></li>
+                    <li><a href="#">MVC</a></li>
+                    <li><a href="#">Controls</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Debug</a></li>
+                    <li><a href="#">Database Connectivity</a></li>
+                    <li><a href="#">Frameworks</a></li>
+                    <li><a href="#">Sliverlight</a></li>
+                    <li><a href="#">Libraries</a></li>
                 </ul>
 
 
-                <li data-toggle="collapse" data-target="#service" class="collapsed title-section">
+                <li data-toggle="collapse" data-target="#java" class="collapsed title-section">
                     <a href="#"><i class="fa icon-java-bold fa-lg"></i>Java <span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse menu-section" id="service">
-                    <li>New Service 1</li>
-                    <li>New Service 2</li>
-                    <li>New Service 3</li>
+                <ul class="sub-menu collapse menu-section" id="java">
+                    <li>Java Core</li>
+                    <li>Android</li>
+                    <li>JSP and Servlet</li>
                 </ul>
 
 
-                <li data-toggle="collapse" data-target="#new" class="collapsed title-section">
+                <li data-toggle="collapse" data-target="#ror" class="collapsed title-section">
                     <a href="#"><i class="fa icon-ruby-on-rails fa-lg"></i>Ruby On Rails <span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse menu-section" id="new">
-                    <li>New New 1</li>
-                    <li>New New 2</li>
-                    <li>New New 3</li>
+                <ul class="sub-menu collapse menu-section" id="ror">
+                    <li>View</li>
+                    <li>Controller</li>
+                    <li>Model</li>
+                    <li>Security</li>
+                    <li>Hacks</li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#python" class="collapsed title-section">
+                    <a href="#"><i class="fa icon-python fa-lg"></i>Python <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse menu-section" id="python">
+                    <li>View</li>
+                    <li>Controller</li>
+                    <li>Model</li>
+                    <li>Security</li>
+                    <li>Hacks</li>
                 </ul>
 
 

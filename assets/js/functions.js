@@ -12,7 +12,10 @@
 	    //$(".menu-section").collapse('hide');
 	    $(this).addClass('active');
 	    $(this).siblings('li').removeClass('active');
-	
+	    // $(this).siblings('li').addClass('collapsed').attr({
+	    // 	'aria-expanded': 'false',
+	    // });;
+
 	});
     
 
