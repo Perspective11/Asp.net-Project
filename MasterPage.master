@@ -15,6 +15,7 @@
     <div id="backBottom" class="fixedBack"></div>
     <div id="backside" class="fixedBack"></div>
     <nav id="mainNav" class="navbar-fixed-top">
+
         <div class="">
 
             <a class="navbar-brand animated" href="#"><span class="fa fa-code fa-2x"></span> CodeBlog <span id="cursor">_</span></a>
@@ -25,8 +26,20 @@
                 <li><a href="About.aspx">About Us</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
+            
         </div>
+
     </nav>
+    <%--<div class="container">
+        <div class="fb-profile">
+            <div class="fb-profile-text">
+                <h1>Eli Macy</h1>
+                <p>Girls just wanna go fun.</p>
+            </div>
+            <img align="right" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example" /> 
+        </div>
+    </div>--%>
+    <!-- /container -->  
     <div class="nav-side-menu">
     <div class="brand">Browse</div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
@@ -36,15 +49,15 @@
             <ul id="menu-content" class="menu-content collapse out ">
                 <li class="title-section">
                     <a href="#">
-                        <i class="fa fa-dashboard fa-lg menue"></i>Dashboard
+                        <i class="fa fa-dashboard fa-lg menue"></i> Dashboard
                     </a>
                 </li>
 
                 <li data-toggle="collapse" data-target="#asp" class="collapsed title-section active">
-                    <a href="#"><i class="fa fa-gift fa-lg"></i>Asp.net <span class="arrow"></span></a>
+                    <a href="#"><i class="devicons devicons-visualstudio fa-lg"></i>Asp.net <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="asp">
-                    <li class="active"><a href="#">CSS3 Animation</a></li>
+                    <li class="active"><a href="#">Environment</a></li>
                     <li><a href="#">MVC</a></li>
                     <li><a href="#">Controls</a></li>
                     <li><a href="#">Security</a></li>
@@ -58,7 +71,7 @@
 
 
                 <li data-toggle="collapse" data-target="#java" class="collapsed title-section">
-                    <a href="#"><i class="fa icon-java-bold fa-lg"></i>Java <span class="arrow"></span></a>
+                    <a href="#"><i class="devicons devicons-java"></i>Java<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="java">
                     <li>Java Core</li>
@@ -68,7 +81,7 @@
 
 
                 <li data-toggle="collapse" data-target="#ror" class="collapsed title-section">
-                    <a href="#"><i class="fa icon-ruby-on-rails fa-lg"></i>Ruby On Rails <span class="arrow"></span></a>
+                    <a href="#"><i class="devicons devicons-ruby_on_rails"></i>Ruby On Rails<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="ror">
                     <li>View</li>
@@ -79,9 +92,31 @@
                 </ul>
 
                 <li data-toggle="collapse" data-target="#python" class="collapsed title-section">
-                    <a href="#"><i class="fa icon-python fa-lg"></i>Python <span class="arrow"></span></a>
+                    <a href="#"><i class="devicons devicons-python"></i>Python<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="python">
+                    <li>View</li>
+                    <li>Controller</li>
+                    <li>Model</li>
+                    <li>Security</li>
+                    <li>Hacks</li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#javascript" class="collapsed title-section">
+                    <a href="#"><i class="devicons devicons-javascript"></i>JavaScript<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse menu-section" id="javascript">
+                    <li>View</li>
+                    <li>Controller</li>
+                    <li>Model</li>
+                    <li>Security</li>
+                    <li>Hacks</li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#jquery" class="collapsed title-section">
+                    <a href="#"><i class="devicons devicons-jquery"></i>JQuery<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse menu-section" id="jquery">
                     <li>View</li>
                     <li>Controller</li>
                     <li>Model</li>
@@ -97,9 +132,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
-                        <i class="fa fa-users fa-lg"></i>Users
-                    </a>
+                    <a href="#"><i class="fa fa-users fa-lg"></i> Users</a>
                 </li>
             </ul>
         </div>

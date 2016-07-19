@@ -5,17 +5,18 @@
   font-weight: 200;
   background-color: #2e353d;
   position: fixed;
-  top: 0px;
+  top: 150px;
+  bottom: 0;
   width: 300px;
-  height: 100%;
+  height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
   color: lighten($primary, 50%);
-  padding-top: 150px;
+  //margin-top: 150px;
+  //box-sizing: margin-box;
   overflow-y: auto;
   @media (max-width: 767px){
-    margin-top: 235px;
-    height: 100%;
+    top: 235px;
   }
 }
 .nav-side-menu .brand {
@@ -35,6 +36,16 @@
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
+  a {
+    i.devicons {
+      position: relative;
+      top: 3px;
+      font-size: 22px;
+      padding: 5px;
+      text-align: center;
+    }
+
+  }
   /*    
     .collapsed{
        .arrow:before{
@@ -66,11 +77,11 @@
 }
 .nav-side-menu ul .sub-menu li.active,
 .nav-side-menu li .sub-menu li.active {
-  color: #d19b3d;
+  color: $primary;
 }
 .nav-side-menu ul .sub-menu li.active a,
 .nav-side-menu li .sub-menu li.active a {
-  color: #d19b3d;
+  color: $primary;
 }
 .nav-side-menu ul .sub-menu li,
 .nav-side-menu li .sub-menu li {
@@ -102,7 +113,7 @@
   border-bottom: 1px solid #23282e;
 }
 .nav-side-menu li a {
-  text-decoration: none;
+  tesxt-decoration: none;
   color: #e1ffff;
 }
 .nav-side-menu li a i {

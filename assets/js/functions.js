@@ -11,12 +11,7 @@
     $(".title-section").click(function(){ 
 	    //$(".menu-section").collapse('hide');
 	    $(this).addClass('active');
-	    $(this).siblings('li').removeClass('active');
-	    // $(this).siblings('li').addClass('collapsed').attr({
-	    // 	'aria-expanded': 'false',
-	    // });;
-
+	    $(this).siblings('li').removeClass('active').addClass('collapsed');
+	    //$(this).siblings('ul').animate().removeClass('in');
 	});
-    
-
 });

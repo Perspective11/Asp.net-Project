@@ -2208,483 +2208,539 @@
   clip: auto; }
 
 /*!
- * Font Mfizz 2.3.0-SNAPSHOT
- * Copyright 2013-2016 Fizzed, Inc.
- * MIT License
- *
- * Project: http://fizzed.com/oss/font-mfizz
- *
- * The font designed for technology and software geeks representing programming
- * languages, operating systems, software engineering, and technology.
- *
- * Fizzed, Inc.
- * Web: http://fizzed.com/
- * Twitter: http://twitter.com/fizzed_inc
+ *  Devicons 1.7.0 made by Theodore Vorillas / http://vorillaz.com 
  */
 @font-face {
-  font-family: "FontMfizz";
-  src: url("/assets/sass/1-tools/icons/font-mfizz.eot");
-  src: url("/assets/sass/1-tools/icons/font-mfizz.eot?#iefix") format("embedded-opentype"), url("/assets/sass/1-tools/icons/font-mfizz.woff") format("woff"), url("/assets/sass/1-tools/icons/font-mfizz.ttf") format("truetype"), url("/assets/sass/1-tools/icons/font-mfizz.svg#font-mfizz") format("svg");
+  font-family: 'devicons';
+  src: url("/bower_components/devicons/fonts/devicons.eot?xqxft6");
+  src: url("/bower_components/devicons/fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("/bower_components/devicons/fonts/devicons.woff?xqxft6") format("woff"), url("/bower_components/devicons/fonts/devicons.ttf?xqxft6") format("truetype"), url("/bower_components/devicons/fonts/devicons.svg?xqxft6#devicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: "FontMfizz";
-    src: url("/assets/sass/1-tools/icons/font-mfizz.svg#font-mfizz") format("svg"); } }
-
-[data-icon]:before {
-  content: attr(data-icon); }
-
-[data-icon]:before,
-.icon-3dprint:before,
-.icon-angular:before,
-.icon-antenna:before,
-.icon-apache:before,
-.icon-archlinux:before,
-.icon-aws:before,
-.icon-blackberry:before,
-.icon-bomb:before,
-.icon-c:before,
-.icon-cassandra:before,
-.icon-centos:before,
-.icon-clojure:before,
-.icon-coffee-bean:before,
-.icon-cplusplus:before,
-.icon-csharp:before,
-.icon-css:before,
-.icon-database:before,
-.icon-database-alt:before,
-.icon-database-alt2:before,
-.icon-debian:before,
-.icon-docker:before,
-.icon-dreamhost:before,
-.icon-elixir:before,
-.icon-erlang:before,
-.icon-exherbo:before,
-.icon-fedora:before,
-.icon-fire-alt:before,
-.icon-freebsd:before,
-.icon-gentoo:before,
-.icon-ghost:before,
-.icon-git:before,
-.icon-gnome:before,
-.icon-google:before,
-.icon-google-alt:before,
-.icon-google-code:before,
-.icon-google-developers:before,
-.icon-gradle:before,
-.icon-grails:before,
-.icon-grails-alt:before,
-.icon-grunt:before,
-.icon-hadoop:before,
-.icon-haskell:before,
-.icon-heroku:before,
-.icon-html:before,
-.icon-iphone:before,
-.icon-java:before,
-.icon-java-bold:before,
-.icon-java-duke:before,
-.icon-javascript:before,
-.icon-javascript-alt:before,
-.icon-jetty:before,
-.icon-kde:before,
-.icon-laravel:before,
-.icon-line-graph:before,
-.icon-linux-mint:before,
-.icon-looking:before,
-.icon-mariadb:before,
-.icon-maven:before,
-.icon-microscope:before,
-.icon-mobile-device:before,
-.icon-mobile-phone-alt:before,
-.icon-mobile-phone-broadcast:before,
-.icon-mongodb:before,
-.icon-mssql:before,
-.icon-mysql:before,
-.icon-mysql-alt:before,
-.icon-netbsd:before,
-.icon-nginx:before,
-.icon-nginx-alt:before,
-.icon-nginx-alt2:before,
-.icon-nodejs:before,
-.icon-objc:before,
-.icon-oracle:before,
-.icon-oracle-alt:before,
-.icon-osx:before,
-.icon-perl:before,
-.icon-phone-alt:before,
-.icon-phone-gap:before,
-.icon-phone-retro:before,
-.icon-php:before,
-.icon-php-alt:before,
-.icon-playframework:before,
-.icon-playframework-alt:before,
-.icon-plone:before,
-.icon-postgres:before,
-.icon-postgres-alt:before,
-.icon-python:before,
-.icon-raspberrypi:before,
-.icon-redhat:before,
-.icon-redis:before,
-.icon-ruby:before,
-.icon-ruby-on-rails:before,
-.icon-ruby-on-rails-alt:before,
-.icon-satellite:before,
-.icon-scala:before,
-.icon-scala-alt:before,
-.icon-script:before,
-.icon-script-alt:before,
-.icon-shell:before,
-.icon-solaris:before,
-.icon-splatter:before,
-.icon-spring:before,
-.icon-suse:before,
-.icon-svg:before,
-.icon-symfony:before,
-.icon-tomcat:before,
-.icon-ubuntu:before,
-.icon-wireless:before,
-.icon-wordpress:before {
-  display: inline-block;
-  font-family: "FontMfizz";
+.devicons {
+  font-family: 'devicons';
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
   text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+  -moz-osx-font-smoothing: grayscale; }
 
-.icon-3dprint:before {
-  content: "\f100"; }
+.devicons-git:before {
+  content: ""; }
 
-.icon-angular:before {
-  content: "\f101"; }
+.devicons-git_compare:before {
+  content: ""; }
 
-.icon-antenna:before {
-  content: "\f102"; }
+.devicons-git_branch:before {
+  content: ""; }
 
-.icon-apache:before {
-  content: "\f103"; }
+.devicons-git_commit:before {
+  content: ""; }
 
-.icon-archlinux:before {
-  content: "\f104"; }
+.devicons-git_pull_request:before {
+  content: ""; }
 
-.icon-aws:before {
-  content: "\f105"; }
+.devicons-git_merge:before {
+  content: ""; }
 
-.icon-blackberry:before {
-  content: "\f106"; }
+.devicons-bitbucket:before {
+  content: ""; }
 
-.icon-bomb:before {
-  content: "\f107"; }
+.devicons-github_alt:before {
+  content: ""; }
 
-.icon-c:before {
-  content: "\f108"; }
+.devicons-github_badge:before {
+  content: ""; }
 
-.icon-cassandra:before {
-  content: "\f109"; }
+.devicons-github:before {
+  content: ""; }
 
-.icon-centos:before {
-  content: "\f10a"; }
+.devicons-github_full:before {
+  content: ""; }
 
-.icon-clojure:before {
-  content: "\f10b"; }
+.devicons-java:before {
+  content: ""; }
 
-.icon-coffee-bean:before {
-  content: "\f10c"; }
+.devicons-ruby:before {
+  content: ""; }
 
-.icon-cplusplus:before {
-  content: "\f10d"; }
+.devicons-scala:before {
+  content: ""; }
 
-.icon-csharp:before {
-  content: "\f10e"; }
+.devicons-python:before {
+  content: ""; }
 
-.icon-css:before {
-  content: "\f10f"; }
+.devicons-go:before {
+  content: ""; }
 
-.icon-database:before {
-  content: "\f110"; }
+.devicons-ruby_on_rails:before {
+  content: ""; }
 
-.icon-database-alt:before {
-  content: "\f111"; }
+.devicons-django:before {
+  content: ""; }
 
-.icon-database-alt2:before {
-  content: "\f112"; }
+.devicons-markdown:before {
+  content: ""; }
 
-.icon-debian:before {
-  content: "\f113"; }
+.devicons-php:before {
+  content: ""; }
 
-.icon-docker:before {
-  content: "\f114"; }
+.devicons-mysql:before {
+  content: ""; }
 
-.icon-dreamhost:before {
-  content: "\f115"; }
+.devicons-streamline:before {
+  content: ""; }
 
-.icon-elixir:before {
-  content: "\f116"; }
+.devicons-database:before {
+  content: ""; }
 
-.icon-erlang:before {
-  content: "\f117"; }
+.devicons-laravel:before {
+  content: ""; }
 
-.icon-exherbo:before {
-  content: "\f118"; }
+.devicons-javascript:before {
+  content: ""; }
 
-.icon-fedora:before {
-  content: "\f119"; }
+.devicons-angular:before {
+  content: ""; }
 
-.icon-fire-alt:before {
-  content: "\f11a"; }
+.devicons-backbone:before {
+  content: ""; }
 
-.icon-freebsd:before {
-  content: "\f11b"; }
+.devicons-coffeescript:before {
+  content: ""; }
 
-.icon-gentoo:before {
-  content: "\f11c"; }
+.devicons-jquery:before {
+  content: ""; }
 
-.icon-ghost:before {
-  content: "\f11d"; }
+.devicons-modernizr:before {
+  content: ""; }
 
-.icon-git:before {
-  content: "\f11e"; }
+.devicons-jquery_ui:before {
+  content: ""; }
 
-.icon-gnome:before {
-  content: "\f11f"; }
+.devicons-ember:before {
+  content: ""; }
 
-.icon-google:before {
-  content: "\f120"; }
+.devicons-dojo:before {
+  content: ""; }
 
-.icon-google-alt:before {
-  content: "\f121"; }
+.devicons-nodejs:before {
+  content: ""; }
 
-.icon-google-code:before {
-  content: "\f122"; }
+.devicons-nodejs_small:before {
+  content: ""; }
 
-.icon-google-developers:before {
-  content: "\f123"; }
+.devicons-javascript_shield:before {
+  content: ""; }
 
-.icon-gradle:before {
-  content: "\f124"; }
+.devicons-bootstrap:before {
+  content: ""; }
 
-.icon-grails:before {
-  content: "\f125"; }
+.devicons-sass:before {
+  content: ""; }
 
-.icon-grails-alt:before {
-  content: "\f126"; }
+.devicons-css3_full:before {
+  content: ""; }
 
-.icon-grunt:before {
-  content: "\f127"; }
+.devicons-css3:before {
+  content: ""; }
 
-.icon-hadoop:before {
-  content: "\f128"; }
+.devicons-html5:before {
+  content: ""; }
 
-.icon-haskell:before {
-  content: "\f129"; }
+.devicons-html5_multimedia:before {
+  content: ""; }
 
-.icon-heroku:before {
-  content: "\f12a"; }
+.devicons-html5_device_access:before {
+  content: ""; }
 
-.icon-html:before {
-  content: "\f12b"; }
+.devicons-html5_3d_effects:before {
+  content: ""; }
 
-.icon-iphone:before {
-  content: "\f12c"; }
+.devicons-html5_connectivity:before {
+  content: ""; }
 
-.icon-java:before {
-  content: "\f12d"; }
+.devicons-ghost_small:before {
+  content: ""; }
 
-.icon-java-bold:before {
-  content: "\f12e"; }
+.devicons-ghost:before {
+  content: ""; }
 
-.icon-java-duke:before {
-  content: "\f12f"; }
+.devicons-magento:before {
+  content: ""; }
 
-.icon-javascript:before {
-  content: "\f130"; }
+.devicons-joomla:before {
+  content: ""; }
 
-.icon-javascript-alt:before {
-  content: "\f131"; }
+.devicons-jekyll_small:before {
+  content: ""; }
 
-.icon-jetty:before {
-  content: "\f132"; }
+.devicons-drupal:before {
+  content: ""; }
 
-.icon-kde:before {
-  content: "\f133"; }
+.devicons-wordpress:before {
+  content: ""; }
 
-.icon-laravel:before {
-  content: "\f134"; }
+.devicons-grunt:before {
+  content: ""; }
 
-.icon-line-graph:before {
-  content: "\f135"; }
+.devicons-bower:before {
+  content: ""; }
 
-.icon-linux-mint:before {
-  content: "\f136"; }
+.devicons-npm:before {
+  content: ""; }
 
-.icon-looking:before {
-  content: "\f137"; }
+.devicons-yahoo_small:before {
+  content: ""; }
 
-.icon-mariadb:before {
-  content: "\f138"; }
+.devicons-yahoo:before {
+  content: ""; }
 
-.icon-maven:before {
-  content: "\f139"; }
+.devicons-bing_small:before {
+  content: ""; }
 
-.icon-microscope:before {
-  content: "\f13a"; }
+.devicons-windows:before {
+  content: ""; }
 
-.icon-mobile-device:before {
-  content: "\f13b"; }
+.devicons-linux:before {
+  content: ""; }
 
-.icon-mobile-phone-alt:before {
-  content: "\f13c"; }
+.devicons-ubuntu:before {
+  content: ""; }
 
-.icon-mobile-phone-broadcast:before {
-  content: "\f13d"; }
+.devicons-android:before {
+  content: ""; }
 
-.icon-mongodb:before {
-  content: "\f13e"; }
+.devicons-apple:before {
+  content: ""; }
 
-.icon-mssql:before {
-  content: "\f13f"; }
+.devicons-appstore:before {
+  content: ""; }
 
-.icon-mysql:before {
-  content: "\f140"; }
+.devicons-phonegap:before {
+  content: ""; }
 
-.icon-mysql-alt:before {
-  content: "\f141"; }
+.devicons-blackberry:before {
+  content: ""; }
 
-.icon-netbsd:before {
-  content: "\f142"; }
+.devicons-stackoverflow:before {
+  content: ""; }
 
-.icon-nginx:before {
-  content: "\f143"; }
+.devicons-techcrunch:before {
+  content: ""; }
 
-.icon-nginx-alt:before {
-  content: "\f144"; }
+.devicons-codrops:before {
+  content: ""; }
 
-.icon-nginx-alt2:before {
-  content: "\f145"; }
+.devicons-css_tricks:before {
+  content: ""; }
 
-.icon-nodejs:before {
-  content: "\f146"; }
+.devicons-smashing_magazine:before {
+  content: ""; }
 
-.icon-objc:before {
-  content: "\f147"; }
+.devicons-netmagazine:before {
+  content: ""; }
 
-.icon-oracle:before {
-  content: "\f148"; }
+.devicons-codepen:before {
+  content: ""; }
 
-.icon-oracle-alt:before {
-  content: "\f149"; }
+.devicons-cssdeck:before {
+  content: ""; }
 
-.icon-osx:before {
-  content: "\f14a"; }
+.devicons-hackernews:before {
+  content: ""; }
 
-.icon-perl:before {
-  content: "\f14b"; }
+.devicons-dropbox:before {
+  content: ""; }
 
-.icon-phone-alt:before {
-  content: "\f14c"; }
+.devicons-google_drive:before {
+  content: ""; }
 
-.icon-phone-gap:before {
-  content: "\f14d"; }
+.devicons-visualstudio:before {
+  content: ""; }
 
-.icon-phone-retro:before {
-  content: "\f14e"; }
+.devicons-unity_small:before {
+  content: ""; }
 
-.icon-php:before {
-  content: "\f14f"; }
+.devicons-raspberry_pi:before {
+  content: ""; }
 
-.icon-php-alt:before {
-  content: "\f150"; }
+.devicons-chrome:before {
+  content: ""; }
 
-.icon-playframework:before {
-  content: "\f151"; }
+.devicons-ie:before {
+  content: ""; }
 
-.icon-playframework-alt:before {
-  content: "\f152"; }
+.devicons-firefox:before {
+  content: ""; }
 
-.icon-plone:before {
-  content: "\f153"; }
+.devicons-opera:before {
+  content: ""; }
 
-.icon-postgres:before {
-  content: "\f154"; }
+.devicons-safari:before {
+  content: ""; }
 
-.icon-postgres-alt:before {
-  content: "\f155"; }
+.devicons-swift:before {
+  content: ""; }
 
-.icon-python:before {
-  content: "\f156"; }
+.devicons-symfony:before {
+  content: ""; }
 
-.icon-raspberrypi:before {
-  content: "\f157"; }
+.devicons-symfony_badge:before {
+  content: ""; }
 
-.icon-redhat:before {
-  content: "\f158"; }
+.devicons-less:before {
+  content: ""; }
 
-.icon-redis:before {
-  content: "\f159"; }
+.devicons-stylus:before {
+  content: ""; }
 
-.icon-ruby:before {
-  content: "\f15a"; }
+.devicons-trello:before {
+  content: ""; }
 
-.icon-ruby-on-rails:before {
-  content: "\f15b"; }
+.devicons-atlassian:before {
+  content: ""; }
 
-.icon-ruby-on-rails-alt:before {
-  content: "\f15c"; }
+.devicons-jira:before {
+  content: ""; }
 
-.icon-satellite:before {
-  content: "\f15d"; }
+.devicons-envato:before {
+  content: ""; }
 
-.icon-scala:before {
-  content: "\f15e"; }
+.devicons-snap_svg:before {
+  content: ""; }
 
-.icon-scala-alt:before {
-  content: "\f15f"; }
+.devicons-raphael:before {
+  content: ""; }
 
-.icon-script:before {
-  content: "\f160"; }
+.devicons-google_analytics:before {
+  content: ""; }
 
-.icon-script-alt:before {
-  content: "\f161"; }
+.devicons-compass:before {
+  content: ""; }
 
-.icon-shell:before {
-  content: "\f162"; }
+.devicons-onedrive:before {
+  content: ""; }
 
-.icon-solaris:before {
-  content: "\f163"; }
+.devicons-gulp:before {
+  content: ""; }
 
-.icon-splatter:before {
-  content: "\f164"; }
+.devicons-atom:before {
+  content: ""; }
 
-.icon-spring:before {
-  content: "\f165"; }
+.devicons-cisco:before {
+  content: ""; }
 
-.icon-suse:before {
-  content: "\f166"; }
+.devicons-nancy:before {
+  content: ""; }
 
-.icon-svg:before {
-  content: "\f167"; }
+.devicons-clojure:before {
+  content: ""; }
 
-.icon-symfony:before {
-  content: "\f168"; }
+.devicons-clojure_alt:before {
+  content: ""; }
 
-.icon-tomcat:before {
-  content: "\f169"; }
+.devicons-perl:before {
+  content: ""; }
 
-.icon-ubuntu:before {
-  content: "\f16a"; }
+.devicons-celluloid:before {
+  content: ""; }
 
-.icon-wireless:before {
-  content: "\f16b"; }
+.devicons-w3c:before {
+  content: ""; }
 
-.icon-wordpress:before {
-  content: "\f16c"; }
+.devicons-redis:before {
+  content: ""; }
+
+.devicons-postgresql:before {
+  content: ""; }
+
+.devicons-webplatform:before {
+  content: ""; }
+
+.devicons-jenkins:before {
+  content: ""; }
+
+.devicons-requirejs:before {
+  content: ""; }
+
+.devicons-opensource:before {
+  content: ""; }
+
+.devicons-typo3:before {
+  content: ""; }
+
+.devicons-uikit:before {
+  content: ""; }
+
+.devicons-doctrine:before {
+  content: ""; }
+
+.devicons-groovy:before {
+  content: ""; }
+
+.devicons-nginx:before {
+  content: ""; }
+
+.devicons-haskell:before {
+  content: ""; }
+
+.devicons-zend:before {
+  content: ""; }
+
+.devicons-gnu:before {
+  content: ""; }
+
+.devicons-yeoman:before {
+  content: ""; }
+
+.devicons-heroku:before {
+  content: ""; }
+
+.devicons-debian:before {
+  content: ""; }
+
+.devicons-travis:before {
+  content: ""; }
+
+.devicons-dotnet:before {
+  content: ""; }
+
+.devicons-codeigniter:before {
+  content: ""; }
+
+.devicons-javascript_badge:before {
+  content: ""; }
+
+.devicons-yii:before {
+  content: ""; }
+
+.devicons-msql_server:before {
+  content: ""; }
+
+.devicons-composer:before {
+  content: ""; }
+
+.devicons-krakenjs_badge:before {
+  content: ""; }
+
+.devicons-krakenjs:before {
+  content: ""; }
+
+.devicons-mozilla:before {
+  content: ""; }
+
+.devicons-firebase:before {
+  content: ""; }
+
+.devicons-sizzlejs:before {
+  content: ""; }
+
+.devicons-creativecommons:before {
+  content: ""; }
+
+.devicons-creativecommons_badge:before {
+  content: ""; }
+
+.devicons-mitlicence:before {
+  content: ""; }
+
+.devicons-senchatouch:before {
+  content: ""; }
+
+.devicons-bugsense:before {
+  content: ""; }
+
+.devicons-extjs:before {
+  content: ""; }
+
+.devicons-mootools_badge:before {
+  content: ""; }
+
+.devicons-mootools:before {
+  content: ""; }
+
+.devicons-ruby_rough:before {
+  content: ""; }
+
+.devicons-komodo:before {
+  content: ""; }
+
+.devicons-coda:before {
+  content: ""; }
+
+.devicons-bintray:before {
+  content: ""; }
+
+.devicons-terminal:before {
+  content: ""; }
+
+.devicons-code:before {
+  content: ""; }
+
+.devicons-responsive:before {
+  content: ""; }
+
+.devicons-dart:before {
+  content: ""; }
+
+.devicons-aptana:before {
+  content: ""; }
+
+.devicons-mailchimp:before {
+  content: ""; }
+
+.devicons-netbeans:before {
+  content: ""; }
+
+.devicons-dreamweaver:before {
+  content: ""; }
+
+.devicons-brackets:before {
+  content: ""; }
+
+.devicons-eclipse:before {
+  content: ""; }
+
+.devicons-cloud9:before {
+  content: ""; }
+
+.devicons-scrum:before {
+  content: ""; }
+
+.devicons-prolog:before {
+  content: ""; }
+
+.devicons-terminal_badge:before {
+  content: ""; }
+
+.devicons-code_badge:before {
+  content: ""; }
+
+.devicons-mongodb:before {
+  content: ""; }
+
+.devicons-meteor:before {
+  content: ""; }
+
+.devicons-meteorfull:before {
+  content: ""; }
+
+.devicons-fsharp:before {
+  content: ""; }
+
+.devicons-rust:before {
+  content: ""; }
+
+.devicons-ionic:before {
+  content: ""; }
+
+.devicons-sublime:before {
+  content: ""; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -9038,6 +9094,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent; }
+
 ::-webkit-scrollbar {
   width: 0.5em;
   height: 0.5em; }
@@ -9226,6 +9286,28 @@ input[type="button"] {
         color: white;
         box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15); }
 
+.fb-profile {
+  margin-top: 245px; }
+
+.fb-profile img.fb-image-lg {
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px; }
+
+.fb-image-profile {
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%; }
+
+@media (max-width: 768px) {
+  .fb-profile-text > h1 {
+    font-weight: 700;
+    font-size: 16px; }
+  .fb-image-profile {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%; } }
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -9233,18 +9315,17 @@ input[type="button"] {
   font-weight: 200;
   background-color: #2e353d;
   position: fixed;
-  top: 0px;
+  top: 150px;
+  bottom: 0;
   width: 300px;
-  height: 100%;
+  height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
   color: #d8ecde;
-  padding-top: 150px;
   overflow-y: auto; }
   @media (max-width: 767px) {
     .nav-side-menu {
-      margin-top: 235px;
-      height: 100%; } }
+      top: 235px; } }
 
 .nav-side-menu .brand {
   background-color: #23282e;
@@ -9276,6 +9357,13 @@ input[type="button"] {
             }
      }
 */ }
+  .nav-side-menu ul a i.devicons,
+  .nav-side-menu li a i.devicons {
+    position: relative;
+    top: 3px;
+    font-size: 22px;
+    padding: 5px;
+    text-align: center; }
 
 .nav-side-menu ul :not(collapsed) .arrow:before,
 .nav-side-menu li :not(collapsed) .arrow:before {
@@ -9294,11 +9382,11 @@ input[type="button"] {
 
 .nav-side-menu ul .sub-menu li.active,
 .nav-side-menu li .sub-menu li.active {
-  color: #d19b3d; }
+  color: #3F8654; }
 
 .nav-side-menu ul .sub-menu li.active a,
 .nav-side-menu li .sub-menu li.active a {
-  color: #d19b3d; }
+  color: #3F8654; }
 
 .nav-side-menu ul .sub-menu li,
 .nav-side-menu li .sub-menu li {
@@ -9331,7 +9419,7 @@ input[type="button"] {
   border-bottom: 1px solid #23282e; }
 
 .nav-side-menu li a {
-  text-decoration: none;
+  tesxt-decoration: none;
   color: #e1ffff; }
 
 .nav-side-menu li a i {
