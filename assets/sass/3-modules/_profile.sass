@@ -1,0 +1,45 @@
+.fb-profile
+  //clear: both
+  position: absolute
+  right: 0px
+  margin: 10px
+  top: 110px
+  display: block
+  width: 300px
+  height: 200px
+  text-align: right
+  //background: pink
+
+
+  .fb-image-profile
+    width: 80px
+    height: 80px
+    margin: 10px
+    float: right
+  .fb-profile-text
+    h4
+      color: $secondary
+      background: $cool-grey-light
+      display: inline-block
+      border-radius: 10px
+      padding: 0 20px
+    p
+  @media (max-width: 767px)
+    left: 0px
+    margin-left: 20px
+    text-align: left
+    .fb-image-profile
+      float: left
+      width: 70px
+      height: 70px
+    .fb-profile-text
+      h4
+        font-size: 16px
+      p
+        font-size: 12px
+  @media (max-width: 375px)
+    margin-left: 10px
+    .fb-image-profile
+      width: 50px
+      height: 50px
+    .fb-profile-text

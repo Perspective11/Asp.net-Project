@@ -18,7 +18,7 @@
 
         <div class="">
 
-            <a class="navbar-brand animated" href="#"><span class="fa fa-code fa-2x"></span> CodeBlog <span id="cursor">_</span></a>
+            <a class="navbar-brand animated" href="#"><span class="fa fa-code fa-2x"></span>CodeBlog <span id="cursor">_</span></a>
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="Index.aspx">Home</a></li>
@@ -26,20 +26,21 @@
                 <li><a href="About.aspx">About Us</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
-            
+
         </div>
 
-    </nav>
-    <%--<div class="container">
         <div class="fb-profile">
+            <img class="fb-image-profile thumbnail" src="assets/img/guest-profile.png" alt="Profile image example" />
             <div class="fb-profile-text">
-                <h1>Eli Macy</h1>
-                <p>Girls just wanna go fun.</p>
+                <h4>Guest</h4>
+                <p>Please <a href="Login">Login</a> or <a href="Signup">Signup</a><br />
+                    to participate.</p>
             </div>
-            <img align="right" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example" /> 
         </div>
-    </div>--%>
-    <!-- /container -->  
+
+
+    </nav>
+
     <div class="nav-side-menu">
     <div class="brand">Browse</div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
