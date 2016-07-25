@@ -1,24 +1,70 @@
 div.post
-
+	background-color: white
+	border-radius: 10px
+	margin: 2%
+	padding: 10px
+	//max-width: 80%
+	text-align: left
+	float: left
 	h3.post-title
-
-	img.post-image
-
+		clear: both
 	div.post-profile
 
 		img
-
+			max-width: 70px
+			height: auto
+			max-height: 70px
+			display: inline
+			float: left
+			@extend .thumbnail
+			margin: 0 10px 20px 0px
 		h5
+			color: $primary
+			font-size: 20px
+			line-height: 4em
+
+		span.post-timestamp
+
+
+
+	img.post-image
+		max-width: 100%
+		height: auto
+		max-height: 500px
+		//margin: auto
+		//background-color: $secondary
+		display: block
+		@extend .thumbnail
+		//display: none
 
 	p.post-text
+		padding: 30px
+		padding-left: 10px
 
 	div.post-options
+
+		a
+			color: $primary
+			margin: 10px
+			cursor: pointer
+			&.upvote
+				@include icon("thumbs-o-up")
+			&.comment
+				@include icon("commenting-o")
+			&.more
+				@include icon("chevron-down")
+			&:before
+			&:hover:before
+				text-decoration: none
+				span
+					text-decoration: none
+			span
+				color: $secondary
+
 
 	div.post-info
 
 		span
-
-		span.post-timestamp
 
 		span.post-upvotes
 
@@ -31,12 +77,15 @@ div.post
 			div.comment-profile
 
 				img
+					display: none
 
 				h5
 
 			p.comment-text
 
 			div.comment-options
+
+				a
 
 			div.comment-info
 
@@ -62,6 +111,8 @@ div.post
 
 					div.reply-options
 
+						a
+
 					div.reply-info
 
 						span
@@ -76,7 +127,7 @@ div.post
 
 			input
 			
-			textarea
+			textareadiv.post-new-comment
 
 
 

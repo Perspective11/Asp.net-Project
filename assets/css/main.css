@@ -540,7 +540,7 @@
 .fa-chevron-up:before {
   content: ""; }
 
-.fa-chevron-down:before {
+.fa-chevron-down:before, div.post div.post-options a.more:before {
   content: ""; }
 
 .fa-retweet:before {
@@ -584,7 +584,7 @@
 .fa-comments:before {
   content: ""; }
 
-.fa-thumbs-o-up:before {
+.fa-thumbs-o-up:before, div.post div.post-options a.upvote:before {
   content: ""; }
 
 .fa-thumbs-o-down:before {
@@ -2021,7 +2021,7 @@
 .fa-commenting:before {
   content: ""; }
 
-.fa-commenting-o:before {
+.fa-commenting-o:before, div.post div.post-options a.comment:before {
   content: ""; }
 
 .fa-houzz:before {
@@ -2922,6 +2922,9 @@ th {
 
 .invisible {
   visibility: hidden; }
+
+.absolute {
+  position: absolute; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -7215,7 +7218,7 @@ a.badge:hover, a.badge:focus {
       .jumbotron .h1 {
         font-size: 63px; } }
 
-.thumbnail {
+.thumbnail, div.post div.post-profile img, div.post img.post-image {
   display: block;
   padding: 4px;
   margin-bottom: 20px;
@@ -7225,14 +7228,14 @@ a.badge:hover, a.badge:focus {
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out; }
-  .thumbnail > img,
-  .thumbnail a > img {
+  .thumbnail > img, div.post div.post-profile img > img, div.post img.post-image > img,
+  .thumbnail a > img, div.post div.post-profile img a > img, div.post img.post-image a > img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto; }
-  .thumbnail .caption {
+  .thumbnail .caption, div.post div.post-profile img .caption, div.post img.post-image .caption {
     padding: 9px;
     color: #333333; }
 
@@ -9094,10 +9097,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-* {
-  -webkit-tap-highlight-color: transparent;
-  -moz-tap-highlight-color: transparent; }
-
 ::-webkit-scrollbar {
   width: 0.5em;
   height: 0.5em; }
@@ -9113,12 +9112,13 @@ body {
   scrollbar-track-color: white; }
 
 #MainForm {
-  position: relative;
-  top: 150px;
+  position: absolute;
+  top: 200px;
   left: 300px; }
   @media (max-width: 767px) {
     #MainForm {
-      top: 235px; } }
+      top: 300px;
+      left: 0; } }
 
 ::selection {
   background: #84859A; }
@@ -9131,6 +9131,10 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #84859A; }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent; }
 
 a {
   color: red;
@@ -9229,7 +9233,11 @@ input[type="button"] {
   clear: both;
   min-height: 150px;
   max-height: 250px;
-  background-color: white; }
+  background-color: white;
+  box-shadow: 2px 1px 99px 1px rgba(0, 0, 0, 0.48); }
+  @media (max-width: 767px) {
+    #mainNav {
+      position: absolute; } }
   #mainNav div a.navbar-brand {
     background-color: #3F8654;
     margin: 30px 0 0 30px;
@@ -9340,7 +9348,7 @@ input[type="button"] {
   font-size: 12px;
   font-weight: 200;
   background-color: #2e353d;
-  position: fixed;
+  position: relative;
   top: 150px;
   bottom: 0;
   width: 300px;
@@ -9348,10 +9356,8 @@ input[type="button"] {
   overflow-y: scroll;
   overflow-x: hidden;
   color: #d8ecde;
+  z-index: 3;
   overflow-y: auto; }
-  @media (max-width: 767px) {
-    .nav-side-menu {
-      top: 235px; } }
 
 .nav-side-menu .brand {
   background-color: #23282e;
@@ -9383,10 +9389,13 @@ input[type="button"] {
             }
      }
 */ }
-  .nav-side-menu ul a i.devicons,
-  .nav-side-menu li a i.devicons {
+  .nav-side-menu ul i,
+  .nav-side-menu li i {
+    margin-right: 5px; }
+  .nav-side-menu ul i.devicons,
+  .nav-side-menu li i.devicons {
     position: relative;
-    top: 3px;
+    top: 4px;
     font-size: 22px;
     padding: 5px;
     text-align: center; }
@@ -9445,7 +9454,7 @@ input[type="button"] {
   border-bottom: 1px solid #23282e; }
 
 .nav-side-menu li a {
-  tesxt-decoration: none;
+  text-decoration: none;
   color: #e1ffff; }
 
 .nav-side-menu li a i {
@@ -9461,9 +9470,11 @@ input[type="button"] {
 
 @media (max-width: 767px) {
   .nav-side-menu {
-    position: relative;
     width: 100%;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    margin-top: 234px;
+    top: inherit;
+    bottom: inherit; }
   .nav-side-menu .toggle-btn {
     display: block;
     cursor: pointer;
@@ -9485,3 +9496,69 @@ input[type="button"] {
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block; } }
+
+.sidebar-affix {
+  position: fixed;
+  margin-top: 0; }
+
+div.post {
+  background-color: white;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 10px;
+  text-align: left;
+  float: left; }
+  div.post h3.post-title {
+    clear: both; }
+  div.post div.post-profile img {
+    max-width: 70px;
+    height: auto;
+    max-height: 70px;
+    display: inline;
+    float: left;
+    margin: 0 10px 20px 0px; }
+  div.post div.post-profile h5 {
+    color: #3F8654;
+    font-size: 20px;
+    line-height: 4em; }
+  div.post img.post-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    display: block; }
+  div.post p.post-text {
+    padding: 30px;
+    padding-left: 10px; }
+  div.post div.post-options a {
+    color: #3F8654;
+    margin: 10px;
+    cursor: pointer; }
+    div.post div.post-options a.upvote:before {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      text-decoration: inherit;
+      margin-right: 0.4em; }
+    div.post div.post-options a.comment:before {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      text-decoration: inherit;
+      margin-right: 0.4em; }
+    div.post div.post-options a.more:before {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      text-decoration: inherit;
+      margin-right: 0.4em; }
+    div.post div.post-options a:hover:before {
+      text-decoration: none; }
+      div.post div.post-options a:hover:before span {
+        text-decoration: none; }
+    div.post div.post-options a span {
+      color: #2E353D; }
+  div.post div.post-comment-section div.post-comment div.comment-profile img {
+    display: none; }

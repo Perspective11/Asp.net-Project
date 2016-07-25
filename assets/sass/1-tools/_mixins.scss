@@ -1,4 +1,4 @@
-/// Mixin to customize scrollbars
+    /// Mixin to customize scrollbars
 /// Beware, this does not work in all browsers
 /// @author Hugo Giraudel
 /// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
@@ -6,24 +6,81 @@
 /// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
 /// @example scss - Scrollbar styling
 ///   @include scrollbars(.5em, slategray);
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-  // For Google Chrome
-  ::-webkit-scrollbar {
-      width:  $size;
-      height: $size;
-  }
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    // For Google Chrome
+    ::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+    // For Internet Explorer
+    body {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}
 
-  ::-webkit-scrollbar-thumb {
-      background: $foreground-color;
-  }
+//Font-Awesome Icon Mixin
+// @mixin faicon($icon) {
+//     @include fa-icon;
+//     @extend .fa;
+//     @extend .fa-#{$icon}: before;
+// }
 
-  ::-webkit-scrollbar-track {
-      background: $background-color;
-  }
+// For adding font icons to elements using CSS pseudo-elements
+// http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+// @mixin icon($position: before, $icon: false, $styles: true) {
+//     @if $position==both {
+//         $position: 'before, &:after';
+//     }
+//     // Either a :before or :after pseudo-element, or both, defaulting to :before
+//     &:#{$position} {
+//         @if $icon {
+//             // A particular icon has been specified
+//             content: "#{map-get($icons, $icon)}";
+//         }
+//         @if $styles {
+//             // Supportive icon styles required
+//             speak: none;
+//             font-style: normal;
+//             font-weight: normal;
+//             font-family: 'Icons';
+//         }
+//         // Include any extra rules supplied for the pseudo-element
+//         @content;
+//     }
+// }
 
-  // For Internet Explorer
-  body {
-    scrollbar-face-color: $foreground-color;
-    scrollbar-track-color: $background-color;
+@mixin icon($name) {
+    &:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        margin-right: 0.4em;
+    }
+    @extend .fa-#{$name};
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

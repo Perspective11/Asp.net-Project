@@ -41,7 +41,7 @@
 
     </nav>
 
-    <div class="nav-side-menu">
+    <div class="nav-side-menu sidebar-affix">
     <div class="brand">Browse</div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
@@ -50,12 +50,12 @@
             <ul id="menu-content" class="menu-content collapse out ">
                 <li class="title-section">
                     <a href="#">
-                        <i class="fa fa-dashboard fa-lg menue"></i> Dashboard
+                        <i class="fa fa-dashboard fa-lg menue"></i>Dashboard
                     </a>
                 </li>
 
                 <li data-toggle="collapse" data-target="#asp" class="collapsed title-section active">
-                    <a href="#"><i class="devicons devicons-visualstudio fa-lg"></i>Asp.net <span class="arrow"></span></a>
+                    <i class="devicons devicons-visualstudio"></i><a href="#">Asp.net <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="asp">
                     <li class="active"><a href="#">Environment</a></li>
@@ -72,7 +72,7 @@
 
 
                 <li data-toggle="collapse" data-target="#java" class="collapsed title-section">
-                    <a href="#"><i class="devicons devicons-java"></i>Java<span class="arrow"></span></a>
+                    <i class="devicons devicons-java"></i><a href="#">Java<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="java">
                     <li>Java Core</li>
@@ -82,7 +82,7 @@
 
 
                 <li data-toggle="collapse" data-target="#ror" class="collapsed title-section">
-                    <a href="#"><i class="devicons devicons-ruby_on_rails"></i>Ruby On Rails<span class="arrow"></span></a>
+                    <i class="devicons devicons-ruby_on_rails"></i><a href="#">Ruby On Rails<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="ror">
                     <li>View</li>
@@ -93,7 +93,7 @@
                 </ul>
 
                 <li data-toggle="collapse" data-target="#python" class="collapsed title-section">
-                    <a href="#"><i class="devicons devicons-python"></i>Python<span class="arrow"></span></a>
+                    <i class="devicons devicons-python"></i><a href="#">Python<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="python">
                     <li>View</li>
@@ -104,7 +104,7 @@
                 </ul>
 
                 <li data-toggle="collapse" data-target="#javascript" class="collapsed title-section">
-                    <a href="#"><i class="devicons devicons-javascript"></i>JavaScript<span class="arrow"></span></a>
+                    <i class="devicons devicons-javascript"></i><a href="#">JavaScript<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="javascript">
                     <li>View</li>
@@ -115,7 +115,7 @@
                 </ul>
 
                 <li data-toggle="collapse" data-target="#jquery" class="collapsed title-section">
-                    <a href="#"><i class="devicons devicons-jquery"></i>JQuery<span class="arrow"></span></a>
+                    <i class="devicons devicons-jquery"></i><a href="#">JQuery<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse menu-section" id="jquery">
                     <li>View</li>
@@ -133,7 +133,7 @@
                 </li>
 
                 <li>
-                    <a href="#"><i class="fa fa-users fa-lg"></i> Users</a>
+                    <a href="#"><i class="fa fa-users fa-lg"></i>Users</a>
                 </li>
             </ul>
         </div>

@@ -4,7 +4,7 @@
   font-size: 12px;
   font-weight: 200;
   background-color: #2e353d;
-  position: fixed;
+  position: relative;
   top: 150px;
   bottom: 0;
   width: 300px;
@@ -12,12 +12,11 @@
   overflow-y: scroll;
   overflow-x: hidden;
   color: lighten($primary, 50%);
+  z-index: 3;
   //margin-top: 150px;
   //box-sizing: margin-box;
   overflow-y: auto;
-  @media (max-width: 767px){
-    top: 235px;
-  }
+  
 }
 .nav-side-menu .brand {
   background-color: #23282e;
@@ -36,16 +35,19 @@
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  a {
-    i.devicons {
-      position: relative;
-      top: 3px;
-      font-size: 22px;
-      padding: 5px;
-      text-align: center;
-    }
-
+  
+  i {
+    margin-right: 5px;
   }
+  i.devicons {
+    position: relative;
+    top: 4px;
+    font-size: 22px;
+    padding: 5px;
+    text-align: center;      
+  }
+    
+  
   /*    
     .collapsed{
        .arrow:before{
@@ -113,7 +115,7 @@
   border-bottom: 1px solid #23282e;
 }
 .nav-side-menu li a {
-  tesxt-decoration: none;
+  text-decoration: none;
   color: #e1ffff;
 }
 .nav-side-menu li a i {
@@ -132,9 +134,11 @@
 }
 @media (max-width: 767px) {
   .nav-side-menu {
-    position: relative;
     width: 100%;
     margin-bottom: 10px;
+    margin-top: 234px;
+    top: inherit;
+    bottom: inherit;
   }
   .nav-side-menu .toggle-btn {
     display: block;
@@ -162,3 +166,7 @@
   }
 }
 
+.sidebar-affix  {
+  position: fixed;
+  margin-top: 0;
+}
