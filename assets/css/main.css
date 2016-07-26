@@ -540,7 +540,7 @@
 .fa-chevron-up:before {
   content: ""; }
 
-.fa-chevron-down:before, div.post div.post-options a.more:before, div.post div.post-comment-section div.post-comment div.comment-options a.more:before {
+.fa-chevron-down:before, div.post div.post-options a.more:before, div.post div.post-comment-section div.post-comment div.comment-options a.more:before, div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.more:before {
   content: ""; }
 
 .fa-retweet:before {
@@ -584,7 +584,7 @@
 .fa-comments:before {
   content: ""; }
 
-.fa-thumbs-o-up:before, div.post div.post-options a.upvote:before, div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before {
+.fa-thumbs-o-up:before, div.post div.post-options a.upvote:before, div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before, div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.upvote:before {
   content: ""; }
 
 .fa-thumbs-o-down:before {
@@ -958,7 +958,8 @@
 
 .fa-mail-reply:before,
 .fa-reply:before,
-div.post div.post-comment-section div.post-comment div.comment-options a.reply:before {
+div.post div.post-comment-section div.post-comment div.comment-options a.reply:before,
+div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.reply:before {
   content: ""; }
 
 .fa-github-alt:before {
@@ -7219,7 +7220,7 @@ a.badge:hover, a.badge:focus {
       .jumbotron .h1 {
         font-size: 63px; } }
 
-.thumbnail, div.post div.post-profile img, div.post img.post-image, div.post div.post-comment-section div.post-comment div.comment-profile img {
+.thumbnail, div.post div.post-profile img, div.post img.post-image, div.post div.post-comment-section div.post-comment div.comment-profile img, div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile img {
   display: block;
   padding: 4px;
   margin-bottom: 20px;
@@ -7229,14 +7230,14 @@ a.badge:hover, a.badge:focus {
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out; }
-  .thumbnail > img, div.post div.post-profile img > img, div.post img.post-image > img, div.post div.post-comment-section div.post-comment div.comment-profile img > img,
-  .thumbnail a > img, div.post div.post-profile img a > img, div.post img.post-image a > img, div.post div.post-comment-section div.post-comment div.comment-profile img a > img {
+  .thumbnail > img, div.post div.post-profile img > img, div.post img.post-image > img, div.post div.post-comment-section div.post-comment div.comment-profile img > img, div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile img > img,
+  .thumbnail a > img, div.post div.post-profile img a > img, div.post img.post-image a > img, div.post div.post-comment-section div.post-comment div.comment-profile img a > img, div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile img a > img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto; }
-  .thumbnail .caption, div.post div.post-profile img .caption, div.post img.post-image .caption, div.post div.post-comment-section div.post-comment div.comment-profile img .caption {
+  .thumbnail .caption, div.post div.post-profile img .caption, div.post img.post-image .caption, div.post div.post-comment-section div.post-comment div.comment-profile img .caption, div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile img .caption {
     padding: 9px;
     color: #333333; }
 
@@ -9580,11 +9581,14 @@ div.post {
     div.post div.post-options a span {
       color: #2E353D; }
   div.post div.post-comment-section {
-    background: #e6e6e6;
+    background: #f2f2f2;
     border-radius: 10px;
-    padding: 10px; }
+    padding: 0px; }
     div.post div.post-comment-section div.post-comment {
-      margin-left: 60px; }
+      background: #e6e6e6;
+      border-radius: 10px;
+      padding: 10px;
+      padding-left: 70px; }
       div.post div.post-comment-section div.post-comment div.comment-profile {
         position: relative; }
         div.post div.post-comment-section div.post-comment div.comment-profile img {
@@ -9641,3 +9645,69 @@ div.post {
             text-decoration: none; }
         div.post div.post-comment-section div.post-comment div.comment-options a span {
           color: #2E353D; }
+      div.post div.post-comment-section div.post-comment div.comment-reply-section {
+        padding: 0px;
+        background: #ECF0F1;
+        border-radius: 10px;
+        margin-left: -30px; }
+        div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply {
+          padding: 10px;
+          background-color: #fafafa;
+          border-radius: 10px;
+          padding-left: 60px; }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile {
+            position: relative; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile img {
+              position: absolute;
+              max-width: 40px;
+              display: inline;
+              margin: 0 10px 20px -50px; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile h5 {
+              font-size: 14px;
+              color: #4F5B69;
+              display: inline-block;
+              margin-bottom: 0; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile span {
+              display: block;
+              padding-right: 5%;
+              color: grey;
+              font-style: italic;
+              margin-bottom: 10px;
+              font-size: 10px; }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply p.reply-text {
+            position: relative;
+            padding: 0 8% 0 10px; }
+            @media (max-width: 767px) {
+              div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply p.reply-text {
+                margin-left: -40px; } }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a {
+            color: #3F8654;
+            margin: 0 10px;
+            cursor: pointer; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.upvote:before {
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              display: inline-block;
+              text-decoration: inherit;
+              margin-right: 0.4em; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.reply:before {
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              display: inline-block;
+              text-decoration: inherit;
+              margin-right: 0.4em; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.more:before {
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              display: inline-block;
+              text-decoration: inherit;
+              margin-right: 0.4em; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a:hover:before {
+              text-decoration: none; }
+              div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a:hover:before span {
+                text-decoration: none; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a span {
+              color: #2E353D; }
