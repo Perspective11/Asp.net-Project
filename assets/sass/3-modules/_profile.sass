@@ -1,15 +1,20 @@
 .fb-profile
   //clear: both
+  color: black
   position: absolute
   right: 0px
   margin: 10px
+  padding: 5px
   top: 110px
   display: block
-  width: 300px
-  height: 200px
+  min-width: 260px
+  max-width: 300px
+  background: rgba($primary, 0.2)
+  border-radius: 5px
+
+  //height: 200px
   text-align: right
   //background: pink
-
 
   .fb-image-profile
     width: 80px
@@ -24,22 +29,33 @@
       border-radius: 10px
       padding: 0 20px
     p
+      margin-bottom: 0
+      a
+        color: $primary
+  @media (max-width: 1024px)
+    transform: scale(0.8) 
+    transform-origin: right
+
+
   @media (max-width: 767px)
+    transform: scale(0.7)
+    transform-origin: left
     left: 0px
     margin-left: 20px
     text-align: left
     .fb-image-profile
       float: left
-      width: 70px
-      height: 70px
+      //width: 70px
+      //height: 70px
     .fb-profile-text
       h4
-        font-size: 16px
+        //font-size: 16px
       p
-        font-size: 12px
+        //font-size: 12px
   @media (max-width: 375px)
+    transform: scale(0.6)
     margin-left: 10px
     .fb-image-profile
-      width: 50px
-      height: 50px
+      //width: 50px
+      //height: 50px
     .fb-profile-text

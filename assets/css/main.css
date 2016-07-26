@@ -540,7 +540,7 @@
 .fa-chevron-up:before {
   content: ""; }
 
-.fa-chevron-down:before, div.post div.post-options a.more:before {
+.fa-chevron-down:before, div.post div.post-options a.more:before, div.post div.post-comment-section div.post-comment div.comment-options a.more:before {
   content: ""; }
 
 .fa-retweet:before {
@@ -584,7 +584,7 @@
 .fa-comments:before {
   content: ""; }
 
-.fa-thumbs-o-up:before, div.post div.post-options a.upvote:before {
+.fa-thumbs-o-up:before, div.post div.post-options a.upvote:before, div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before {
   content: ""; }
 
 .fa-thumbs-o-down:before {
@@ -957,7 +957,8 @@
   content: ""; }
 
 .fa-mail-reply:before,
-.fa-reply:before {
+.fa-reply:before,
+div.post div.post-comment-section div.post-comment div.comment-options a.reply:before {
   content: ""; }
 
 .fa-github-alt:before {
@@ -7218,7 +7219,7 @@ a.badge:hover, a.badge:focus {
       .jumbotron .h1 {
         font-size: 63px; } }
 
-.thumbnail, div.post div.post-profile img, div.post img.post-image {
+.thumbnail, div.post div.post-profile img, div.post img.post-image, div.post div.post-comment-section div.post-comment div.comment-profile img {
   display: block;
   padding: 4px;
   margin-bottom: 20px;
@@ -7228,14 +7229,14 @@ a.badge:hover, a.badge:focus {
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out; }
-  .thumbnail > img, div.post div.post-profile img > img, div.post img.post-image > img,
-  .thumbnail a > img, div.post div.post-profile img a > img, div.post img.post-image a > img {
+  .thumbnail > img, div.post div.post-profile img > img, div.post img.post-image > img, div.post div.post-comment-section div.post-comment div.comment-profile img > img,
+  .thumbnail a > img, div.post div.post-profile img a > img, div.post img.post-image a > img, div.post div.post-comment-section div.post-comment div.comment-profile img a > img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto; }
-  .thumbnail .caption, div.post div.post-profile img .caption, div.post img.post-image .caption {
+  .thumbnail .caption, div.post div.post-profile img .caption, div.post img.post-image .caption, div.post div.post-comment-section div.post-comment div.comment-profile img .caption {
     padding: 9px;
     color: #333333; }
 
@@ -9113,8 +9114,8 @@ body {
 
 #MainForm {
   position: absolute;
-  top: 200px;
-  left: 300px; }
+  top: 150px;
+  left: 250px; }
   @media (max-width: 767px) {
     #MainForm {
       top: 300px;
@@ -9231,7 +9232,7 @@ input[type="button"] {
 
 #mainNav {
   clear: both;
-  min-height: 150px;
+  min-height: 100px;
   max-height: 250px;
   background-color: white;
   box-shadow: 2px 1px 99px 1px rgba(0, 0, 0, 0.48); }
@@ -9303,13 +9304,17 @@ input[type="button"] {
         box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15); }
 
 .fb-profile {
+  color: black;
   position: absolute;
   right: 0px;
   margin: 10px;
+  padding: 5px;
   top: 110px;
   display: block;
-  width: 300px;
-  height: 200px;
+  min-width: 260px;
+  max-width: 300px;
+  background: rgba(63, 134, 84, 0.2);
+  border-radius: 5px;
   text-align: right; }
   .fb-profile .fb-image-profile {
     width: 80px;
@@ -9322,25 +9327,32 @@ input[type="button"] {
     display: inline-block;
     border-radius: 10px;
     padding: 0 20px; }
+  .fb-profile .fb-profile-text p {
+    margin-bottom: 0; }
+    .fb-profile .fb-profile-text p a {
+      color: #3F8654; }
+  @media (max-width: 1024px) {
+    .fb-profile {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      -webkit-transform-origin: right;
+      transform-origin: right; } }
   @media (max-width: 767px) {
     .fb-profile {
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: left;
+      transform-origin: left;
       left: 0px;
       margin-left: 20px;
       text-align: left; }
       .fb-profile .fb-image-profile {
-        float: left;
-        width: 70px;
-        height: 70px; }
-      .fb-profile .fb-profile-text h4 {
-        font-size: 16px; }
-      .fb-profile .fb-profile-text p {
-        font-size: 12px; } }
+        float: left; } }
   @media (max-width: 375px) {
     .fb-profile {
-      margin-left: 10px; }
-      .fb-profile .fb-image-profile {
-        width: 50px;
-        height: 50px; } }
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      margin-left: 10px; } }
 
 .nav-side-menu {
   overflow: auto;
@@ -9349,9 +9361,9 @@ input[type="button"] {
   font-weight: 200;
   background-color: #2e353d;
   position: relative;
-  top: 150px;
+  top: 100px;
   bottom: 0;
-  width: 300px;
+  width: 250px;
   height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -9505,9 +9517,13 @@ div.post {
   background-color: white;
   border-radius: 10px;
   margin: 2%;
-  padding: 10px;
+  padding: 20px;
+  max-width: 70%;
   text-align: left;
   float: left; }
+  @media (max-width: 767px) {
+    div.post {
+      max-width: inherit; } }
   div.post h3.post-title {
     clear: both; }
   div.post div.post-profile img {
@@ -9520,18 +9536,21 @@ div.post {
   div.post div.post-profile h5 {
     color: #3F8654;
     font-size: 20px;
-    line-height: 4em; }
+    line-height: 2em; }
+  div.post div.post-profile span.post-timestamp {
+    color: grey;
+    font-style: italic;
+    font-size: 12; }
   div.post img.post-image {
     max-width: 100%;
     height: auto;
     max-height: 500px;
     display: block; }
   div.post p.post-text {
-    padding: 30px;
-    padding-left: 10px; }
+    padding: 10px 8% 0 10px; }
   div.post div.post-options a {
     color: #3F8654;
-    margin: 10px;
+    margin: 0 10px;
     cursor: pointer; }
     div.post div.post-options a.upvote:before {
       font-family: FontAwesome;
@@ -9560,5 +9579,65 @@ div.post {
         text-decoration: none; }
     div.post div.post-options a span {
       color: #2E353D; }
-  div.post div.post-comment-section div.post-comment div.comment-profile img {
-    display: none; }
+  div.post div.post-comment-section {
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 10px; }
+    div.post div.post-comment-section div.post-comment {
+      margin-left: 60px; }
+      div.post div.post-comment-section div.post-comment div.comment-profile {
+        position: relative; }
+        div.post div.post-comment-section div.post-comment div.comment-profile img {
+          position: absolute;
+          max-width: 50px;
+          display: inline;
+          margin: 0 10px 20px -60px; }
+        div.post div.post-comment-section div.post-comment div.comment-profile h5 {
+          font-size: 16px;
+          color: #4F5B69;
+          display: inline-block;
+          margin-bottom: 0; }
+        div.post div.post-comment-section div.post-comment div.comment-profile span {
+          display: block;
+          padding-right: 5%;
+          color: grey;
+          font-style: italic;
+          margin-bottom: 10px;
+          font-size: 10px; }
+      div.post div.post-comment-section div.post-comment p.comment-text {
+        position: relative;
+        padding: 0 8% 0 10px; }
+        @media (max-width: 767px) {
+          div.post div.post-comment-section div.post-comment p.comment-text {
+            margin-left: -40px; } }
+      div.post div.post-comment-section div.post-comment div.comment-options a {
+        color: #3F8654;
+        margin: 0 10px;
+        cursor: pointer; }
+        div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before {
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          margin-right: 0.4em; }
+        div.post div.post-comment-section div.post-comment div.comment-options a.reply:before {
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          margin-right: 0.4em; }
+        div.post div.post-comment-section div.post-comment div.comment-options a.more:before {
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          margin-right: 0.4em; }
+        div.post div.post-comment-section div.post-comment div.comment-options a:hover:before {
+          text-decoration: none; }
+          div.post div.post-comment-section div.post-comment div.comment-options a:hover:before span {
+            text-decoration: none; }
+        div.post div.post-comment-section div.post-comment div.comment-options a span {
+          color: #2E353D; }

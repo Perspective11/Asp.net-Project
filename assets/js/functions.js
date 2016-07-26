@@ -3,20 +3,39 @@
     // Get wow started!
     new WOW().init();
 
-    //affix navbar
-    $(window).scroll(function() {
+    //affix sidebar
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        //if you hard code, then use console
+        //.log to determine when you want the 
+        //nav bar to stick.  
+        //console.log($(window).scrollTop())
+        if ($(window).scrollTop() > 236) {
+            $('.nav-side-menu').addClass('sidebar-affix');
+        }
+        if ($(window).scrollTop() < 237) {
+            $('.nav-side-menu').removeClass('sidebar-affix');
+        }
+    }
+    //affix sidebar on scroll
+    $(window).on('scroll', function() {
         // see if it matches the media query of 767
         if (window.matchMedia('(max-width: 767px)').matches) {
-            //if you hard code, then use console
-	        //.log to determine when you want the 
-	        //nav bar to stick.  
-            console.log($(window).scrollTop())
+            //console.log($(window).scrollTop())
             if ($(window).scrollTop() > 236) {
                 $('.nav-side-menu').addClass('sidebar-affix');
             }
             if ($(window).scrollTop() < 237) {
                 $('.nav-side-menu').removeClass('sidebar-affix');
             }
+        }
+    });
+    $(window).resize(function() {
+        // see if it matches the media query of 767
+        if (window.matchMedia('(max-width: 767px)').matches) {
+            $('.nav-side-menu').removeClass('sidebar-affix');   
+        }
+        else {
+        	$('.nav-side-menu').addClass('sidebar-affix');
         }
     });
 

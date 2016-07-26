@@ -2,10 +2,13 @@ div.post
 	background-color: white
 	border-radius: 10px
 	margin: 2%
-	padding: 10px
-	//max-width: 80%
+	padding: 20px
+	max-width: 70%
 	text-align: left
 	float: left
+	@media (max-width: 767px)
+		max-width: inherit		
+	
 	h3.post-title
 		clear: both
 	div.post-profile
@@ -21,9 +24,12 @@ div.post
 		h5
 			color: $primary
 			font-size: 20px
-			line-height: 4em
+			line-height: 2em
 
 		span.post-timestamp
+			color: grey
+			font-style: italic
+			font-size: 12
 
 
 
@@ -38,14 +44,13 @@ div.post
 		//display: none
 
 	p.post-text
-		padding: 30px
-		padding-left: 10px
+		padding: 10px 8% 0 10px
 
 	div.post-options
 
 		a
 			color: $primary
-			margin: 10px
+			margin: 0 10px
 			cursor: pointer
 			&.upvote
 				@include icon("thumbs-o-up")
@@ -62,41 +67,75 @@ div.post
 				color: $secondary
 
 
-	div.post-info
-
-		span
-
-		span.post-upvotes
-
-		span.post-comments
-
 	div.post-comment-section
-
+		background: $lightestgrey
+		border-radius: 10px
+		padding: 10px
 		div.post-comment
-
+			margin-left: 60px
 			div.comment-profile
-
+				position: relative
 				img
-					display: none
+					position: absolute
+					max-width: 50px
+
+					//max-height: 50px
+					display: inline
+					//float: left
+					@extend .thumbnail
+					margin: 0 10px 20px -60px
+					//margin-bottom: 25%
+					//box-sizing: padding
+
 
 				h5
+					font-size: 16px
+					//padding-left: 5px
+					//line-height: 1cm
+					color: $tertiary
+					display: inline-block
+					margin-bottom: 0
+				span
+					display: block
+					//position: absolute
+					padding-right: 5%
+					color: grey
+					//float: right
+					font-style: italic
+					margin-bottom: 10px
+					font-size: 10px
 
+					//position: absolute
+					//line-height: 1cm
+				
 			p.comment-text
+				position: relative
+				padding: 0 8% 0 10px
+				@media (max-width: 767px)
+					margin-left: -40px
+
+
 
 			div.comment-options
 
 				a
-
-			div.comment-info
-
-				span
-
-				span.comment-timesamp
-
-				span.comment-upvotes
-
-				span.comment-replys
-
+					color: $primary
+					margin: 0 10px
+					cursor: pointer
+					&.upvote
+						@include icon("thumbs-o-up")
+					&.reply
+						@include icon("reply")
+					&.more
+						@include icon("chevron-down")
+					&:before
+					&:hover:before
+						text-decoration: none
+						span
+							text-decoration: none
+					span
+						color: $secondary
+				
 			div.comment-reply-section
 
 				div.comment-reply
@@ -127,7 +166,7 @@ div.post
 
 			input
 			
-			textareadiv.post-new-comment
+			//textareadiv.post-new-comment
 
 
 

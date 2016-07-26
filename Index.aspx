@@ -8,7 +8,7 @@
         <div class="post-profile user-profile">
             <img src="assets/img/guest-profile.png" alt="user profile" />
             <h5>Aiman Nouman</h5>
-            <span class="post-timestamp">22/5/1993</span>
+            <span class="post-timestamp">22 Mar 2016 - 12:00 AM</span>
         </div> <%--end of post profile--%>
         <h3 class="post-title">How to become a famous Web Developer</h3>
         <img class="post-image" src="assets/img/Wall-e.jpg" alt="post image"/>
@@ -29,17 +29,15 @@ List port grapple hang the jib piracy square-rigged Sail ho splice the main brac
                 <div class="comment-profile user-profile">
                     <img src="assets/img/guest-profile.png" alt="user profile" />
                     <h5>Some Guy</h5>
+                    <span class="comment-timestamp">22 Mar 2016 - 12:00 AM</span>
                 </div> <%--end of comment profile--%>
                 <p class="comment-text">Marooned run a shot across the bow dance the hempen jig hulk to go on account fluke long boat Jack Ketch Jack Tar booty. Clipper carouser jib quarter driver coxswain mizzen brigantine bilge water shrouds. Sea Legs bounty Admiral of the Black run a rig Pieces of Eight scallywag bilge rat lateen sail spirits quarterdeck.</p>
                 <div class="comment-options">
-                    <a class="upvote">Upvote</a>
-                    <a class="reply">Reply</a>
+                    <a class="upvote">Upvote <span class="comment-upvotes" >(2)</span></a>
+                    <a class="reply">Reply <span class="comment-replys">(3)</span></a>
                     <a class="more">More</a>
                 </div>
-                <div class="comment-info">
-                    <span class="comment-upvotes">2</span>
-                    <span class="comment-replys">3</span>
-                </div><%--end of comment info--%>
+                
                 <div class="comment-reply-section hidden">
                     <div class="comment-reply">
                         <div class="reply-profile user-profile">
