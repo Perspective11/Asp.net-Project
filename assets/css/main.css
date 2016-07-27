@@ -9116,11 +9116,16 @@ body {
 #MainForm {
   position: absolute;
   top: 150px;
-  left: 250px; }
+  left: 250px;
+  width: 60%; }
   @media (max-width: 767px) {
     #MainForm {
       top: 300px;
-      left: 0; } }
+      left: 0;
+      width: 100%; } }
+
+#MainDiv {
+  position: relative; }
 
 ::selection {
   background: #84859A; }
@@ -9519,7 +9524,6 @@ div.post {
   border-radius: 10px;
   margin: 2%;
   padding: 20px;
-  max-width: 70%;
   text-align: left;
   float: left; }
   @media (max-width: 767px) {
@@ -9711,3 +9715,131 @@ div.post {
                 text-decoration: none; }
             div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a span {
               color: #2E353D; }
+
+#login-container {
+  padding: 20px; }
+
+.card-container.card {
+  position: relative;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 40px 40px;
+  margin: auto;
+  background-color: #2E353D; }
+
+.btn {
+  font-weight: 700;
+  height: 36px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/*
+ * Card component
+ */
+.card {
+  background-color: #F7F7F7;
+  /* just in case there no content*/
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  /* shadows and rounded borders */
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 50%; }
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 1em; }
+
+.reauth-email {
+  display: block;
+  color: #404040;
+  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box; }
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+  direction: ltr;
+  height: 44px;
+  font-size: 16px; }
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+  opacity: 0.7;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .form-signin input[type=email]:hover, .form-signin input[type=email]:focus, .form-signin input[type=email]:active,
+  .form-signin input[type=password]:hover,
+  .form-signin input[type=password]:focus,
+  .form-signin input[type=password]:active,
+  .form-signin input[type=text]:hover,
+  .form-signin input[type=text]:focus,
+  .form-signin input[type=text]:active,
+  .form-signin button:hover,
+  .form-signin button:focus,
+  .form-signin button:active {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 254, 254, 0.98); }
+
+.form-signin button:hover,
+.form-signin button:focus,
+.form-signin button:active {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 134, 84, 0.98); }
+
+.form-signin .form-control:focus {
+  border-color: #3F8654;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #6891a2; }
+
+.btn.btn-signin {
+  /*background-color: #4d90fe; */
+  background-color: #4F5B69;
+  padding: 0px;
+  font-size: 14px;
+  height: 36px;
+  border-radius: 3px;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+  background-color: #3F8654; }
+
+.forgot-password {
+  color: #6891a2; }
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus {
+  color: #0c6121; }

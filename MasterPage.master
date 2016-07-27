@@ -29,11 +29,11 @@
 
         </div>
 
-        <div class="fb-profile">
+        <div id="user-profile" class="fb-profile">
             <img class="fb-image-profile thumbnail" src="assets/img/guest-profile.png" alt="Profile image example" />
             <div class="fb-profile-text">
                 <h4>Guest</h4>
-                <p>Please <a href="Login">Login</a> or <a href="Signup">Signup</a><br />
+                <p>Please <a href="Login.aspx">Login</a> or <a href="Signup">Signup</a><br />
                     to participate.</p>
             </div>
         </div>

@@ -12,16 +12,22 @@ body
 
 
 
-@include scrollbars(.5em, grey ,white);
+@include scrollbars(.5em, grey ,white)
 
 
 #MainForm
-	position: absolute
-	top: 150px
-	left: 250px
-	@media (max-width: 767px)
+  position: absolute
+  top: 150px
+  left: 250px
+  width: 60%
+
+  @media (max-width: 767px)
     top: 300px
     left: 0
+    width: 100%
+#MainDiv
+    position: relative
+  
   
 		
 	
