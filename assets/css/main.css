@@ -9725,7 +9725,8 @@ div.post {
   max-width: 400px;
   padding: 40px 40px;
   margin: auto;
-  background-color: #2E353D; }
+  background-image: -webkit-linear-gradient(#4F5B69, #2E353D);
+  background-image: linear-gradient(#4F5B69, #2E353D); }
 
 .btn {
   font-weight: 700;
@@ -9766,7 +9767,7 @@ div.post {
 
 .reauth-email {
   display: block;
-  color: #404040;
+  color: #ff6666;
   line-height: 2;
   margin-bottom: 10px;
   font-size: 14px;
@@ -9810,11 +9811,6 @@ div.post {
     transform: scale(1.03);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 254, 254, 0.98); }
 
-.form-signin button:hover,
-.form-signin button:focus,
-.form-signin button:active {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 134, 84, 0.98); }
-
 .form-signin .form-control:focus {
   border-color: #3F8654;
   outline: 0;
@@ -9824,22 +9820,25 @@ div.post {
   /*background-color: #4d90fe; */
   background-color: #4F5B69;
   padding: 0px;
+  color: #BDC3C7;
   font-size: 14px;
   height: 36px;
   border-radius: 3px;
   border: none;
+  font-weight: 400;
+  height: 36px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-  background-color: #3F8654; }
+  background-color: #3F8654;
+  color: white;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 134, 84, 0.98); }
 
 .forgot-password {
   color: #6891a2; }
-
-.forgot-password:hover,
-.forgot-password:active,
-.forgot-password:focus {
-  color: #0c6121; }

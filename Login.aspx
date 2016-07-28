@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
@@ -15,15 +15,18 @@
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <div class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <%--<span  ></span>--%>
+                <asp:Label id="reauthEmail" class="reauth-email" runat="server" Text=""></asp:Label>
+                <asp:TextBox id="inputEmail" name="inputEmail" class="form-control" runat="server" placeholder="Email address" TextMode="Email" required="true" autofocus="true"></asp:TextBox>
+                <asp:TextBox id="inputPassword" name="inputPassword" class="form-control" runat="server" placeholder="Password" TextMode="Password" required="true"></asp:TextBox>
+                 <%--<input type="email" id="inputEmail" name="inputEmail" class="form-control" runat="server" placeholder="Email address" required autofocus>--%>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <asp:Button class="btn btn-lg btn-primary btn-block btn-signin" ID="btnSignIn" runat="server" type="submit" Text="Sign in" OnClick="btnSignIn_Click" />
+                <%--<button  onclick="SignIn_Click" runat="server">Sign in</button>--%>
             </div><!-- /form -->
             <a href="#" class="forgot-password">
                 Forgot the password?
@@ -31,4 +34,3 @@
         </div><!-- /card-container -->
       </div>
 </asp:Content>
-
