@@ -11,4 +11,16 @@ public partial class _Default : System.Web.UI.Page
     {
         
     }
+
+    
+    protected void Page_InitComplete(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["Logout"] != null)
+            {
+                Session.Abandon();
+            }
+        }
+    }
 }

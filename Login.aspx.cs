@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+//using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
 {
@@ -20,7 +23,7 @@ public partial class Login : System.Web.UI.Page
         string loginEmail = inputEmail.Text, loginPassword = inputPassword.Text;
 
         string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
-        string query = "SELECT userid, type FROM users WHERE email=@email AND password=@pwd;";
+        string query = "SELECT userid, type, username, image FROM users WHERE email=@email AND password=@pwd;";
 
         // set up a connection and command in using() blocks
         using (SqlConnection con = new SqlConnection(connectionString))
@@ -40,8 +43,27 @@ public partial class Login : System.Web.UI.Page
                 if (dr.Read() && dr.HasRows)
                 {
                     // get employee ID and role from the reader
-                    string userId = dr[0].ToString();
+                    string userid = dr[0].ToString();
                     string type = dr[1].ToString();
+                    string username = dr[2].ToString();
+                    Byte[] imgData = (byte[])dr[3];
+                    //string imgString = Convert.ToBase64String(imgData);
+                    //byte[] b = null;
+                    //b = (byte[])obj.GetValue(0);
+                    ////OR
+                    //b = (byte[])obj[0];
+                    using (Image image = Image.FromStream(new MemoryStream(imgData)))
+                    {
+                        image.Save(MapPath("assets/img/profile-pic.jpeg"), ImageFormat.Jpeg);
+                        Session["imgSaved"] = true;
+                    }
+                    //Session["image"] = dr[3];
+
+                    Session["username"] = username;
+                    //Session["imgString"] = imgString;
+
+                    
+                    //Session["imgDataLength"] = imgData.Length;
 
                     // depending on role, jump off to various pages
                     switch (type)
@@ -61,7 +83,7 @@ public partial class Login : System.Web.UI.Page
                 }
                 else
                 {
-                    // what do you want to do if NO ROW was returned? E.g. user/pwd combo is wrong
+                    // what do you want to do if NO ROW was returned? E.g. email/pwd combo is wrong
                     reauthEmail.Text = "Invalid Email or Password";
                 }
 
