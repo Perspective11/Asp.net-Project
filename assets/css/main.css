@@ -9556,42 +9556,44 @@ div.post {
     display: block; }
   div.post p.post-text {
     padding: 10px 8% 0 10px; }
-  div.post div.post-options a {
-    color: #3F8654;
-    margin: 0 10px;
-    cursor: pointer; }
-    div.post div.post-options a.upvote:before {
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      display: inline-block;
-      text-decoration: inherit;
-      margin-right: 0.4em; }
-    div.post div.post-options a.comment:before {
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      display: inline-block;
-      text-decoration: inherit;
-      margin-right: 0.4em; }
-    div.post div.post-options a.more:before {
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      display: inline-block;
-      text-decoration: inherit;
-      margin-right: 0.4em; }
-    div.post div.post-options a:hover:before {
-      text-decoration: none; }
-      div.post div.post-options a:hover:before span {
+  div.post div.post-options {
+    margin-bottom: 10px; }
+    div.post div.post-options a {
+      color: #3F8654;
+      margin: 0 10px;
+      cursor: pointer; }
+      div.post div.post-options a.upvote:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        margin-right: 0.4em; }
+      div.post div.post-options a.comment:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        margin-right: 0.4em; }
+      div.post div.post-options a.more:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        margin-right: 0.4em; }
+      div.post div.post-options a:hover:before {
         text-decoration: none; }
-    div.post div.post-options a span {
-      color: #2E353D; }
+        div.post div.post-options a:hover:before span {
+          text-decoration: none; }
+      div.post div.post-options a span {
+        color: #2E353D; }
   div.post div.post-comment-section {
-    background: #f2f2f2;
     border-radius: 10px;
     padding: 0px; }
     div.post div.post-comment-section div.post-comment {
+      margin-bottom: 10px;
       background: #e6e6e6;
       border-radius: 10px;
       padding: 10px;
@@ -9621,44 +9623,46 @@ div.post {
         @media (max-width: 767px) {
           div.post div.post-comment-section div.post-comment p.comment-text {
             margin-left: -40px; } }
-      div.post div.post-comment-section div.post-comment div.comment-options a {
-        color: #3F8654;
-        margin: 0 10px;
-        cursor: pointer; }
-        div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before {
-          font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
-          display: inline-block;
-          text-decoration: inherit;
-          margin-right: 0.4em; }
-        div.post div.post-comment-section div.post-comment div.comment-options a.reply:before {
-          font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
-          display: inline-block;
-          text-decoration: inherit;
-          margin-right: 0.4em; }
-        div.post div.post-comment-section div.post-comment div.comment-options a.more:before {
-          font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
-          display: inline-block;
-          text-decoration: inherit;
-          margin-right: 0.4em; }
-        div.post div.post-comment-section div.post-comment div.comment-options a:hover:before {
-          text-decoration: none; }
-          div.post div.post-comment-section div.post-comment div.comment-options a:hover:before span {
+      div.post div.post-comment-section div.post-comment div.comment-options {
+        margin-bottom: 10px; }
+        div.post div.post-comment-section div.post-comment div.comment-options a {
+          color: #3F8654;
+          margin: 0 10px;
+          cursor: pointer; }
+          div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before {
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: 0.4em; }
+          div.post div.post-comment-section div.post-comment div.comment-options a.reply:before {
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: 0.4em; }
+          div.post div.post-comment-section div.post-comment div.comment-options a.more:before {
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: 0.4em; }
+          div.post div.post-comment-section div.post-comment div.comment-options a:hover:before {
             text-decoration: none; }
-        div.post div.post-comment-section div.post-comment div.comment-options a span {
-          color: #2E353D; }
+            div.post div.post-comment-section div.post-comment div.comment-options a:hover:before span {
+              text-decoration: none; }
+          div.post div.post-comment-section div.post-comment div.comment-options a span {
+            color: #2E353D; }
       div.post div.post-comment-section div.post-comment div.comment-reply-section {
         padding: 0px;
-        background: #ECF0F1;
         border-radius: 10px;
         margin-left: -30px; }
         div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply {
           padding: 10px;
+          margin-bottom: 10px;
           background-color: #fafafa;
           border-radius: 10px;
           padding-left: 60px; }

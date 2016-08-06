@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<post>
+	<post-id></post-id>
+	<post-author></post-author>
+	<post-timestamp></post-timestamp>
+	<post-title></post-title>
+	<post-img-url></post-img-url>
+	<post-text>
+		
+
+	</post-text>
+	<post-options>
+		<post-upvotes></post-upvotes>
+		<post-comments></post-comments>
+		<post-deleted></post-deleted>
+		<post-hidden></post-hidden>
+	</post-options>
+	<post-comment-section>
+		<post-comment>
+			<comment-author></comment-author>
+			<comment-timestamp></comment-timestamp>
+			<comment-text>
+				
+
+			</comment-text>
+			<comment-options>
+				<comment-upvotes></comment-upvotes>
+				<comment-replys></comment-replys>
+				<comment-deleted></comment-deleted>
+				<comment-hidden></comment-hidden>
+			</comment-options>
+			<comment-reply-section>
+				<comment-reply>
+					<reply-author></reply-author>
+					<reply-timestamp></reply-timestamp>
+					<reply-text>
+						
+
+					</reply-text>
+					<reply-options>
+						<reply-upvotes></reply-upvotes>
+						<reply-deleted></reply-deleted>
+						<reply-hidden></reply-hidden>
+					</reply-options>
+				</comment-reply>
+			</comment-reply-section>
+		</post-comment>
+	</post-comment-section>
+	<post-tags>
+		<tag></tag>
+		<tag></tag>
+		<tag></tag>
+		<tag></tag>
+		<tag></tag>
+		<tag></tag>
+		<tag></tag>
+	</post-tags>
+</post>
