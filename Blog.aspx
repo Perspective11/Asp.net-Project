@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Blog.aspx.cs" Inherits="Blog" %>
+﻿<%@ Page Title="Blog" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Blog.aspx.cs" Inherits="Blog" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -66,7 +66,8 @@
                     <%--end of comment reply--%>
                     <% } %> <%-- end of foreach to iterate through the the replys within the comment--%>
                     <div class="comment-new-reply hidden">
-                        <textarea></textarea>
+                        <textarea runat="server" id="Textarea1" placeholder="Submit Comment"></textarea>
+                        <asp:Button runat="server" id="Button1" Text="Submit" />
                     </div>
 
                     <%--end of comment new reply--%>
@@ -75,8 +76,10 @@
             </div>
             <%--end of post comment--%>
             <% } %> <%-- end of foreach to iterate through the comments within the post--%>
-            <div class="post-new-comment hidden">
-                <textarea></textarea>
+            <div class="post-new-comment">
+                <img class="fb-image-profile thumbnail" src=<%= (Session["imgSaved"] != null) ? "assets/img/profile-pic.jpeg" : "assets/img/guest-profile.png" %> alt="Profile Image" />
+                <textarea runat="server" class="new-comment-txt" id="TxtNewComment" placeholder="Submit Comment"></textarea>
+                <asp:Button runat="server" class="new-comment-btn" CssClass="new-comment-btn" id="BtnNewComment" Text="Submit" />
             </div>
             <%--end of post new comment--%>
         </div>
