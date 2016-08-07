@@ -15,7 +15,10 @@ public partial class Blog : System.Web.UI.Page
     public List<XDocument> postsXml = new List<XDocument>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
+        postNewComment.Visible = (Session["username"] != null)? true : false;
+
+
         string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
         //extract the number of post inside the database
         string query = "SELECT * from posts";
@@ -56,4 +59,11 @@ public partial class Blog : System.Web.UI.Page
             deeplink = (string)b.Element("deepLink")                   
         };
      */
+
+    protected void replyReplyAnchor_Click(object sender, EventArgs e)
+    {
+        if ((Session["username"] != null))
+            commentNewReply.Visible = true;
+        else Response.Redirect("~/Login.aspx");
+    }
 }

@@ -19,8 +19,8 @@
             <%= postXml.Root.Element("post-text").Value %>
         </p>
         <div class="post-options">
-            <a class="upvote">Upvote <span class="post-upvotes">(<%= postXml.Root.Element("post-options").Element("post-upvotes").Value %>)</span></a>
-            <a class="comment">Comment <span class="post-comments">(<%= postXml.Root.Element("post-options").Element("post-comments").Value %>)</span></a>
+            <a class="upvote">Upvote </a><span class="post-upvotes">(<%= postXml.Root.Element("post-options").Element("post-upvotes").Value %>)</span>
+            <a class="comment">Comment </a><span class="post-comments">(<%= postXml.Root.Element("post-options").Element("post-comments").Value %>)</span>
             <a class="more">More</a>
         </div>
 
@@ -38,8 +38,8 @@
                 <%--end of comment profile--%>
                 <p class="comment-text readMore"><%= commentElement.Element("comment-text").Value %></p>
                 <div class="comment-options">
-                    <a class="upvote">Upvote <span class="comment-upvotes">(<%= commentElement.Element("comment-options").Element("comment-upvotes").Value %>)</span></a>
-                    <a class="reply">Reply <span class="comment-replys">(<%= commentElement.Element("comment-options").Element("comment-replys").Value %>)</span></a>
+                    <asp:LinkButton runat="server" class="upvote" id="commentUpvoteAnchor">Upvote </asp:LinkButton><span class="comment-upvotes">(<%= commentElement.Element("comment-options").Element("comment-upvotes").Value %>)</span>
+                    <asp:LinkButton class="reply" id="commentReplyAnchor" runat="server" OnClick="replyReplyAnchor_Click">Reply</asp:LinkButton><span class="comment-replys">(<%= commentElement.Element("comment-options").Element("comment-replys").Value %>)</span>
                     <a class="more">More</a>
                 </div>
 
@@ -57,17 +57,18 @@
                         <%--end of reply profile--%>
                         <p class="reply-text readMore"><%= replyElement.Element("reply-text").Value %></p>
                         <div class="reply-options">
-                            <a class="upvote">Upvote <span class="reply-upvotes">(<%= replyElement.Element("reply-options").Element("reply-upvotes").Value %>)</span></a>
-                            <a class="reply">Reply</a>
+                            <asp:LinkButton class="upvote" id="replyUpvoteAnchor" runat="server">Upvote </asp:LinkButton><span class="reply-upvotes">(<%= replyElement.Element("reply-options").Element("reply-upvotes").Value %>)</span>
+                            <asp:LinkButton class="reply" id="replyReplyAnchor" runat="server" OnClick="replyReplyAnchor_Click">Reply</asp:LinkButton>
                             <a class="more">More</a>
                         </div>
                     </div>
 
                     <%--end of comment reply--%>
                     <% } %> <%-- end of foreach to iterate through the the replys within the comment--%>
-                    <div class="comment-new-reply hidden">
-                        <textarea runat="server" id="Textarea1" placeholder="Submit Comment"></textarea>
-                        <asp:Button runat="server" id="Button1" Text="Submit" />
+                    <div class="comment-new-reply" id="commentNewReply" runat="server" visible="false">
+                        <img class="fb-image-profile thumbnail" src=<%= (Session["imgSaved"] != null) ? "assets/img/profile-pic.jpeg" : "assets/img/guest-profile.png" %> alt="Profile Image" />
+                        <textarea runat="server" class="new-reply-txt" id="Textarea1" placeholder="Write your reply"></textarea>
+                        <asp:Button runat="server" class="new-reply-btn" CssClass="new-reply-btn" id="BtnNewReply" Text="Submit" />
                     </div>
 
                     <%--end of comment new reply--%>
@@ -76,9 +77,9 @@
             </div>
             <%--end of post comment--%>
             <% } %> <%-- end of foreach to iterate through the comments within the post--%>
-            <div class="post-new-comment">
+            <div class="post-new-comment" id="postNewComment" runat="server" visible="false">
                 <img class="fb-image-profile thumbnail" src=<%= (Session["imgSaved"] != null) ? "assets/img/profile-pic.jpeg" : "assets/img/guest-profile.png" %> alt="Profile Image" />
-                <textarea runat="server" class="new-comment-txt" id="TxtNewComment" placeholder="Submit Comment"></textarea>
+                <textarea runat="server" class="new-comment-txt" id="TxtNewComment" placeholder="Write your comment"></textarea>
                 <asp:Button runat="server" class="new-comment-btn" CssClass="new-comment-btn" id="BtnNewComment" Text="Submit" />
             </div>
             <%--end of post new comment--%>

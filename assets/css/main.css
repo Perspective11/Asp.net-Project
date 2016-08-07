@@ -9540,6 +9540,8 @@ div.post {
     max-height: 70px;
     display: inline;
     float: left;
+    -o-object-fit: cover;
+    object-fit: cover;
     margin: 0 10px 20px 0px; }
   div.post div.post-profile h5 {
     color: #3F8654;
@@ -9560,7 +9562,7 @@ div.post {
     margin-bottom: 10px; }
     div.post div.post-options a {
       color: #3F8654;
-      margin: 0 10px;
+      margin: 0 0 0 20px;
       cursor: pointer; }
       div.post div.post-options a.upvote:before {
         font-family: FontAwesome;
@@ -9587,8 +9589,8 @@ div.post {
         text-decoration: none; }
         div.post div.post-options a:hover:before span {
           text-decoration: none; }
-      div.post div.post-options a span {
-        color: #2E353D; }
+    div.post div.post-options span {
+      color: #2E353D; }
   div.post div.post-comment-section {
     border-radius: 10px;
     padding: 0px; }
@@ -9603,6 +9605,8 @@ div.post {
         div.post div.post-comment-section div.post-comment div.comment-profile img {
           position: absolute;
           max-width: 50px;
+          -o-object-fit: cover;
+          object-fit: cover;
           display: inline;
           margin: 0 10px 20px -60px; }
         div.post div.post-comment-section div.post-comment div.comment-profile h5 {
@@ -9627,7 +9631,7 @@ div.post {
         margin-bottom: 10px; }
         div.post div.post-comment-section div.post-comment div.comment-options a {
           color: #3F8654;
-          margin: 0 10px;
+          margin: 0 0 0 20px;
           cursor: pointer; }
           div.post div.post-comment-section div.post-comment div.comment-options a.upvote:before {
             font-family: FontAwesome;
@@ -9654,8 +9658,8 @@ div.post {
             text-decoration: none; }
             div.post div.post-comment-section div.post-comment div.comment-options a:hover:before span {
               text-decoration: none; }
-          div.post div.post-comment-section div.post-comment div.comment-options a span {
-            color: #2E353D; }
+        div.post div.post-comment-section div.post-comment div.comment-options span {
+          color: #2E353D; }
       div.post div.post-comment-section div.post-comment div.comment-reply-section {
         padding: 0px;
         border-radius: 10px;
@@ -9672,6 +9676,8 @@ div.post {
               position: absolute;
               max-width: 40px;
               display: inline;
+              -o-object-fit: cover;
+              object-fit: cover;
               margin: 0 10px 20px -50px; }
             div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-profile h5 {
               font-size: 14px;
@@ -9693,7 +9699,7 @@ div.post {
                 margin-left: -40px; } }
           div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a {
             color: #3F8654;
-            margin: 0 10px;
+            margin: 0 0 0 20px;
             cursor: pointer; }
             div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a.upvote:before {
               font-family: FontAwesome;
@@ -9720,8 +9726,51 @@ div.post {
               text-decoration: none; }
               div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a:hover:before span {
                 text-decoration: none; }
-            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options a span {
-              color: #2E353D; }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-reply div.reply-options span {
+            color: #2E353D; }
+        div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-new-reply {
+          background-color: white;
+          display: -webkit-box;
+          display: flex;
+          border-radius: 10px; }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-new-reply img {
+            width: 40px;
+            height: 40px;
+            margin: 10px 10px 20px 10px;
+            -o-object-fit: cover;
+            object-fit: cover; }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-new-reply textarea {
+            height: 1cm;
+            margin: 10px;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            border-radius: 5px;
+            border: solid 2px rgba(63, 134, 84, 0.3);
+            outline: none;
+            resize: none;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            padding: 5px; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-new-reply textarea:focus {
+              box-shadow: 0px 0px 20px 0px rgba(63, 134, 84, 0.5); }
+          div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-new-reply input {
+            width: 80px;
+            padding: 10px;
+            margin: 20px 10px 10px 10px;
+            line-height: 0.5;
+            height: 25px;
+            color: #e6e6e6;
+            background-color: #4fa96a;
+            font-weight: 300;
+            border-radius: 5px;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
+            div.post div.post-comment-section div.post-comment div.comment-reply-section div.comment-new-reply input:hover {
+              -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+              background-color: #3F8654;
+              box-shadow: 0px 0px 14px 0px #3f8654;
+              color: white; }
     div.post div.post-comment-section div.post-new-comment {
       background-color: #e6e6e6;
       border-radius: 10px;
@@ -9730,7 +9779,9 @@ div.post {
       div.post div.post-comment-section div.post-new-comment img {
         max-width: 50px;
         max-height: 50px;
-        margin: 10px 10px 20px 10px; }
+        margin: 10px 10px 20px 10px;
+        -o-object-fit: cover;
+        object-fit: cover; }
       div.post div.post-comment-section div.post-new-comment textarea {
         height: 1cm;
         margin: 15px 5px 5px 5px;
@@ -9739,9 +9790,9 @@ div.post {
         flex-grow: 1;
         outline: none;
         resize: none;
+        border: solid 2px rgba(63, 134, 84, 0.3);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
-        border: none;
         padding: 5px; }
         div.post div.post-comment-section div.post-new-comment textarea:focus {
           box-shadow: 0px 0px 20px 0px rgba(63, 134, 84, 0.5); }
