@@ -9528,7 +9528,7 @@ div.post {
   margin: 2%;
   padding: 20px;
   text-align: left;
-  float: left; }
+  width: 100%; }
   @media (max-width: 767px) {
     div.post {
       max-width: inherit; } }
