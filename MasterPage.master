@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" href="./assets/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css"/>
     <meta name="description" content="The description of my page" />
 </head>
 <body>
@@ -22,19 +22,19 @@
             <a class="navbar-brand animated" href="#"><span class="fa fa-code fa-2x"></span>CodeBlog <span id="cursor">_</span></a>
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="Index.aspx">Home</a></li>
-                <li><a href="Contact.aspx">Contact Us</a></li>
-                <li><a href="About.aspx">About Us</a></li>
-                <li><a href="Blog.aspx">Blog</a></li>
+                <li class="active"><a href="/Index.aspx">Home</a></li>
+                <li><a href="/pages/Contact.aspx">Contact Us</a></li>
+                <li><a href="/pages/About.aspx">About Us</a></li>
+                <li><a href="/pages/Blog.aspx">Blog</a></li>
             </ul>
 
         </div>
 
         <div id="user-profile" class="fb-profile">
-            <img class="fb-image-profile thumbnail" src=<%= (Session["imgSaved"] != null) ? "assets/img/profile-pic.jpeg" : "assets/img/guest-profile.png" %> alt="Profile Image" />
+            <img class="fb-image-profile thumbnail" src=<%= (Session["imgSaved"] != null) ? "/assets/img/profile-pic.jpeg" : "/assets/img/guest-profile.png" %> alt="Profile Image" />
             <div class="fb-profile-text">
                 <h4><%= (Session["username"] != null) ? Session["username"].ToString() : "Guest" %></h4>
-                <p><%= (Session["username"] != null) ? "<a href='Profile.aspx'>Visit Profile</a><br /> <a href='Index.aspx?Logout=true'>Log out</a>" : "Please <a href='Login.aspx'>Login</a> or <a href='Signup'>Signup</a><br />to participate." %></p>
+                <p><%= (Session["username"] != null) ? "<a href='/pages/Profile.aspx'>Visit Profile</a><br /> <a href='/Index.aspx?Logout=true'>Log out</a>" : "Please <a href='/pages/Login.aspx'>Login</a> or <a href='/pages/Signup.aspx'>Signup</a><br />to participate." %></p>
             </div>
         </div>
 
@@ -147,10 +147,10 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-    <script src="./bower_components/jquery/dist/jquery.min.js" ></script>
-    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" ></script>
-    <script src="./bower_components/respond/respond.min.js"></script>
-    <script src="./bower_components/wow/dist/wow.min.js"></script>
-    <script src="./assets/js/functions.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js" ></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" ></script>
+    <script src="/bower_components/respond/respond.min.js"></script>
+    <script src="/bower_components/wow/dist/wow.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
 </body>
 </html>

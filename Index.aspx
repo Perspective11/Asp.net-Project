@@ -3,5 +3,5 @@
 
 
 <asp:Content runat="server" ID="index" ContentPlaceHolderID="MainContent">
-    <a href="Blog.aspx">Blog</a>
+    <a href="/pages/Blog.aspx">Blog</a>
 </asp:Content>

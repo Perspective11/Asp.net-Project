@@ -54,7 +54,7 @@ public partial class Login : System.Web.UI.Page
                     //b = (byte[])obj[0];
                     using (Image image = Image.FromStream(new MemoryStream(imgData)))
                     {
-                        image.Save(MapPath("assets/img/profile-pic.jpeg"), ImageFormat.Jpeg);
+                        image.Save(MapPath("~/assets/img/profile-pic.jpeg"), ImageFormat.Jpeg);
                         Session["imgSaved"] = true;
                     }
                     //Session["image"] = dr[3];

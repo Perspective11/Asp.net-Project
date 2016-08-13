@@ -14,14 +14,10 @@ using System.Xml.Linq;
 public partial class Blog : System.Web.UI.Page
 {
     public int PostCount = 0;
-    public SqlDataReader pdr;
-    public List<XDocument> postsXml = new List<XDocument>();
     protected void Page_Load(object sender, EventArgs e)
     {
 
         //postNewComment.Visible = (Session["username"] != null)? true : false;
-
-        LoadPostHtml();
 
 
         string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
@@ -39,10 +35,10 @@ public partial class Blog : System.Web.UI.Page
                 while (dr.Read())
                 {
                     XDocument doc = XDocument.Parse(dr["content"].ToString());
-                    postsXml.Add(doc);
-                    DataSet ds = new DataSet();
-                    XmlReader reader = XmlReader.Create(new StringReader(dr["content"].ToString()));
-                    ds.ReadXml(reader);
+                    LoadPostHtml(doc);
+                    //DataSet ds = new DataSet();
+                    //XmlReader reader = XmlReader.Create(new StringReader(dr["content"].ToString()));
+                    //ds.ReadXml(reader);
                 }
                 
                 dr.Close();
@@ -68,7 +64,7 @@ public partial class Blog : System.Web.UI.Page
         };
      */
 
-    protected void LoadPostHtml()
+    protected void LoadPostHtml(XDocument doc)
     {
         Random rnd = new Random();
 
@@ -79,7 +75,7 @@ public partial class Blog : System.Web.UI.Page
         PostProfile.CssClass = "post-profile";
 
         Image PostProfileImg = new Image();
-        PostProfileImg.ImageUrl = "assets/img/guest-profile.png";
+        PostProfileImg.ImageUrl = "~/assets/img/guest-profile.png";
 
         Literal PostAuthor = new Literal();
         PostAuthor.Text = "<h5>Post Author</h5>";
@@ -92,7 +88,7 @@ public partial class Blog : System.Web.UI.Page
         PostTitle.Text = "<h3>Post Title</h3>";
 
         Image PostImage = new Image();
-        PostImage.ImageUrl = "assets/img/posts/don't panic.jpg";
+        PostImage.ImageUrl = "~/assets/img/posts/don't panic.jpg";
         PostImage.CssClass = "post-image";
 
         Literal PostText = new Literal();
@@ -131,7 +127,7 @@ public partial class Blog : System.Web.UI.Page
         CommentProfile.CssClass = "comment-profile user-profile";
 
         Image CommentProfileImg = new Image();
-        CommentProfileImg.ImageUrl= "assets/img/guest-profile.png";
+        CommentProfileImg.ImageUrl= "~/assets/img/guest-profile.png";
 
         Literal CommentAuthor = new Literal();
         CommentAuthor.Text = "<h5>Comment Author</h5>";
@@ -176,7 +172,7 @@ public partial class Blog : System.Web.UI.Page
         ReplyProfile.CssClass = "reply-profile user-profile";
 
         Image ReplyProfileImg = new Image();
-        ReplyProfileImg.ImageUrl = "assets/img/guest-profile.png";
+        ReplyProfileImg.ImageUrl = "~/assets/img/guest-profile.png";
 
         Literal ReplyAuthor = new Literal();
         ReplyAuthor.Text = "<h5>Reply Author</h5>";
