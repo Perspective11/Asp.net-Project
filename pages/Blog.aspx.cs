@@ -10,6 +10,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.XPath;
 
 public partial class Blog : System.Web.UI.Page
 {
@@ -78,21 +79,21 @@ public partial class Blog : System.Web.UI.Page
         PostProfileImg.ImageUrl = "~/assets/img/guest-profile.png";
 
         Literal PostAuthor = new Literal();
-        PostAuthor.Text = "<h5>Post Author</h5>";
+        PostAuthor.Text = "<h5>" + doc.XPathSelectElement("/post/post-author").Value + "</h5>";
 
         Label PostTimestamp = new Label();
         PostTimestamp.CssClass = "post-timestamp";
-        PostTimestamp.Text = "12/12/12 - 11:11:11";
+        PostTimestamp.Text = doc.XPathSelectElement("/post").Attribute("timestamp").Value;
 
         Literal PostTitle = new Literal();
-        PostTitle.Text = "<h3>Post Title</h3>";
+        PostTitle.Text = "<h3>" + doc.XPathSelectElement("/post/post-title").Value + " </h3>";
 
         Image PostImage = new Image();
-        PostImage.ImageUrl = "~/assets/img/posts/don't panic.jpg";
+        PostImage.ImageUrl = doc.XPathSelectElement("/post/post-img-url").Value;
         PostImage.CssClass = "post-image";
 
         Literal PostText = new Literal();
-        PostText.Text = "<p class='post-text readMore'>lorem Ipsum</p>";
+        PostText.Text = "<p class='post-text readMore'>" +doc.XPathSelectElement("/post/post-text").Value + "</p>";
 
         Panel PostOptions = new Panel();
         PostOptions.CssClass = "post-options";
@@ -103,7 +104,7 @@ public partial class Blog : System.Web.UI.Page
 
         Label PostUpvotes = new Label();
         PostUpvotes.CssClass = "post-upvotes";
-        PostUpvotes.Text = "(" + rnd.Next() + ")";
+        PostUpvotes.Text = "(" + doc.XPathSelectElement("/post/post-options/post-upvotes").Value + ")";
 
         LinkButton PostCommentBtn = new LinkButton();
         PostCommentBtn.Text = "Comment ";
@@ -111,7 +112,7 @@ public partial class Blog : System.Web.UI.Page
 
         Label PostComments = new Label();
         PostComments.CssClass = "post-Comments";
-        PostComments.Text = "(" + rnd.Next() + ")";
+        PostComments.Text = "(" + doc.XPathSelectElement("/post/post-options/post-upvotes").Value + ")";
 
         LinkButton PostMoreBtn = new LinkButton();
         PostMoreBtn.Text = "More ";
@@ -120,127 +121,131 @@ public partial class Blog : System.Web.UI.Page
         Panel PostCommentSection = new Panel();
         PostCommentSection.CssClass = "post-comment-section";
 
-        Panel PostComment = new Panel();
-        PostComment.CssClass = "post-comment";
+        foreach (XElement XPostComment in doc.XPathSelectElements("/post/post-comment-section/post-comment"))
+        {
+            Panel PostComment = new Panel();
+            PostComment.CssClass = "post-comment";
 
-        Panel CommentProfile = new Panel();
-        CommentProfile.CssClass = "comment-profile user-profile";
+            Panel CommentProfile = new Panel();
+            CommentProfile.CssClass = "comment-profile user-profile";
 
-        Image CommentProfileImg = new Image();
-        CommentProfileImg.ImageUrl= "~/assets/img/guest-profile.png";
+            Image CommentProfileImg = new Image();
+            CommentProfileImg.ImageUrl = "~/assets/img/guest-profile.png";
 
-        Literal CommentAuthor = new Literal();
-        CommentAuthor.Text = "<h5>Comment Author</h5>";
+            Literal CommentAuthor = new Literal();
+            CommentAuthor.Text = "<h5>" + XPostComment.XPathSelectElement("comment-author").Value + "</h5>";
 
-        Label CommentTimestamp = new Label();
-        CommentTimestamp.CssClass = "comment-timestamp";
-        CommentTimestamp.Text = "12/12/12 - 11:11:11";
+            Label CommentTimestamp = new Label();
+            CommentTimestamp.CssClass = "comment-timestamp";
+            CommentTimestamp.Text = XPostComment.XPathSelectElement(".").Attribute("timestamp").Value;
 
-        Literal CommentText = new Literal();
-        CommentText.Text = "<p class='commen-text readMore'>lorem Ipsum</p>";
+            Literal CommentText = new Literal();
+            CommentText.Text = "<p class='commen-text readMore'>" + XPostComment.XPathSelectElement("comment-text").Value + "</p>";
 
-        Panel CommentOptions = new Panel();
-        CommentOptions.CssClass = "comment-options";
+            Panel CommentOptions = new Panel();
+            CommentOptions.CssClass = "comment-options";
 
-        LinkButton CommentUpvoteBtn = new LinkButton();
-        CommentUpvoteBtn.Text = "Upvote ";
-        CommentUpvoteBtn.CssClass = "upvote";
+            LinkButton CommentUpvoteBtn = new LinkButton();
+            CommentUpvoteBtn.Text = "Upvote ";
+            CommentUpvoteBtn.CssClass = "upvote";
 
-        Label CommentUpvotes = new Label();
-        CommentUpvotes.CssClass = "comment-upvotes";
-        CommentUpvotes.Text = "(" + rnd.Next() + ")";
+            Label CommentUpvotes = new Label();
+            CommentUpvotes.CssClass = "comment-upvotes";
+            CommentUpvotes.Text = "(" + XPostComment.XPathSelectElement("comment-options/comment-upvotes").Value  + ")";
 
-        LinkButton CommentReplyBtn = new LinkButton();
-        CommentReplyBtn.Text = "Reply ";
-        CommentReplyBtn.CssClass = "reply";
+            LinkButton CommentReplyBtn = new LinkButton();
+            CommentReplyBtn.Text = "Reply ";
+            CommentReplyBtn.CssClass = "reply";
 
-        Label CommentReplys = new Label();
-        CommentReplys.CssClass = "comment-replys";
-        CommentReplys.Text = "(" + rnd.Next() + ")";
+            Label CommentReplys = new Label();
+            CommentReplys.CssClass = "comment-replys";
+            CommentReplys.Text = "(" + XPostComment.XPathSelectElement("comment-options/comment-replys").Value + ")";
 
-        LinkButton CommentMoreBtn = new LinkButton();
-        CommentMoreBtn.Text = "More ";
-        CommentMoreBtn.CssClass = "more";
+            LinkButton CommentMoreBtn = new LinkButton();
+            CommentMoreBtn.Text = "More ";
+            CommentMoreBtn.CssClass = "more";
 
-        Panel CommentReplySection = new Panel();
-        CommentReplySection.CssClass = "comment-reply-section";
+            Panel CommentReplySection = new Panel();
+            CommentReplySection.CssClass = "comment-reply-section";
 
-        Panel CommentReply = new Panel();
-        CommentReply.CssClass = "comment-reply";
+            foreach (XElement XCommentReply in XPostComment.XPathSelectElements("comment-reply-section/comment-reply"))
+            {
+                Panel CommentReply = new Panel();
+                CommentReply.CssClass = "comment-reply";
 
-        Panel ReplyProfile = new Panel();
-        ReplyProfile.CssClass = "reply-profile user-profile";
+                Panel ReplyProfile = new Panel();
+                ReplyProfile.CssClass = "reply-profile user-profile";
 
-        Image ReplyProfileImg = new Image();
-        ReplyProfileImg.ImageUrl = "~/assets/img/guest-profile.png";
+                Image ReplyProfileImg = new Image();
+                ReplyProfileImg.ImageUrl = "~/assets/img/guest-profile.png";
 
-        Literal ReplyAuthor = new Literal();
-        ReplyAuthor.Text = "<h5>Reply Author</h5>";
+                Literal ReplyAuthor = new Literal();
+                ReplyAuthor.Text = "<h5>" + XCommentReply.XPathSelectElement("reply-author").Value + "</h5>";
 
-        Label ReplyTimestamp = new Label();
-        ReplyTimestamp.CssClass = "reply-timestamp";
-        ReplyTimestamp.Text = "12/12/12 - 11:11:11";
+                Label ReplyTimestamp = new Label();
+                ReplyTimestamp.CssClass = "reply-timestamp";
+                ReplyTimestamp.Text = XCommentReply.XPathSelectElement(".").Attribute("timestamp").Value;
 
-        Literal ReplyText = new Literal();
-        ReplyText.Text = "<p class='reply-text readMore'>lorem Ipsum</p>";
+                Literal ReplyText = new Literal();
+                ReplyText.Text = "<p class='reply-text readMore'>" + XCommentReply.XPathSelectElement("reply-text").Value + "</p>";
 
-        Panel ReplyOptions = new Panel();
-        ReplyOptions.CssClass = "reply-options";
+                Panel ReplyOptions = new Panel();
+                ReplyOptions.CssClass = "reply-options";
 
-        LinkButton ReplyUpvoteBtn = new LinkButton();
-        ReplyUpvoteBtn.Text = "Upvote ";
-        ReplyUpvoteBtn.CssClass = "upvote";
+                LinkButton ReplyUpvoteBtn = new LinkButton();
+                ReplyUpvoteBtn.Text = "Upvote ";
+                ReplyUpvoteBtn.CssClass = "upvote";
 
-        Label ReplyUpvotes = new Label();
-        ReplyUpvotes.CssClass = "reply-upvotes";
-        ReplyUpvotes.Text = "(" + rnd.Next() + ")";
+                Label ReplyUpvotes = new Label();
+                ReplyUpvotes.CssClass = "reply-upvotes";
+                ReplyUpvotes.Text = "(" + XCommentReply.XPathSelectElement("reply-options/reply-upvotes").Value + ")";
 
-        LinkButton ReplyReplyBtn = new LinkButton();
-        ReplyReplyBtn.Text = "Reply ";
-        CommentReplyBtn.CssClass = "reply";
+                LinkButton ReplyReplyBtn = new LinkButton();
+                ReplyReplyBtn.Text = "Reply ";
+                CommentReplyBtn.CssClass = "reply";
 
-        LinkButton ReplyMoreBtn = new LinkButton();
-        ReplyMoreBtn.Text = "More ";
-        ReplyMoreBtn.CssClass = "more";
+                LinkButton ReplyMoreBtn = new LinkButton();
+                ReplyMoreBtn.Text = "More ";
+                ReplyMoreBtn.CssClass = "more";
+
+                ReplyProfile.Controls.Add(ReplyProfileImg);
+                ReplyProfile.Controls.Add(ReplyAuthor);
+                ReplyProfile.Controls.Add(ReplyTimestamp);
+
+                ReplyOptions.Controls.Add(ReplyUpvoteBtn);
+                ReplyOptions.Controls.Add(ReplyUpvotes);
+                ReplyOptions.Controls.Add(ReplyReplyBtn);
+                ReplyOptions.Controls.Add(ReplyMoreBtn);
+
+                CommentReply.Controls.Add(ReplyProfile);
+                CommentReply.Controls.Add(ReplyText);
+                CommentReply.Controls.Add(ReplyOptions);
+
+                CommentReplySection.Controls.Add(CommentReply);
 
 
+            }
 
+
+            CommentProfile.Controls.Add(CommentProfileImg);
+            CommentProfile.Controls.Add(CommentAuthor);
+            CommentProfile.Controls.Add(CommentTimestamp);
+
+            CommentOptions.Controls.Add(CommentUpvoteBtn);
+            CommentOptions.Controls.Add(CommentUpvotes);
+            CommentOptions.Controls.Add(CommentReplyBtn);
+            CommentOptions.Controls.Add(CommentReplySection);
+            CommentOptions.Controls.Add(CommentMoreBtn);
+
+            PostComment.Controls.Add(CommentProfile);
+            PostComment.Controls.Add(CommentText);
+            PostComment.Controls.Add(CommentOptions);
+            PostComment.Controls.Add(CommentReplySection);
+
+            PostCommentSection.Controls.Add(PostComment);
+        }
         
-
-        ReplyProfile.Controls.Add(ReplyProfileImg);
-        ReplyProfile.Controls.Add(ReplyAuthor);
-        ReplyProfile.Controls.Add(ReplyTimestamp);
-
-        ReplyOptions.Controls.Add(ReplyUpvoteBtn);
-        ReplyOptions.Controls.Add(ReplyUpvotes);
-        ReplyOptions.Controls.Add(ReplyReplyBtn);
-        ReplyOptions.Controls.Add(ReplyMoreBtn);
-
-        CommentReply.Controls.Add(ReplyProfile);
-        CommentReply.Controls.Add(ReplyText);
-        CommentReply.Controls.Add(ReplyOptions);
-
-        CommentReplySection.Controls.Add(CommentReply);
-
-
-        CommentProfile.Controls.Add(CommentProfileImg);
-        CommentProfile.Controls.Add(CommentAuthor);
-        CommentProfile.Controls.Add(CommentTimestamp);
-
-        CommentOptions.Controls.Add(CommentUpvoteBtn);
-        CommentOptions.Controls.Add(CommentUpvotes);
-        CommentOptions.Controls.Add(CommentReplyBtn);
-        CommentOptions.Controls.Add(CommentReplySection);
-        CommentOptions.Controls.Add(CommentMoreBtn);
-
-        PostComment.Controls.Add(CommentProfile);
-        PostComment.Controls.Add(CommentText);
-        PostComment.Controls.Add(CommentOptions);
-        PostComment.Controls.Add(CommentReplySection);
-
-        PostCommentSection.Controls.Add(PostComment);
-
-
+        
         PostProfile.Controls.Add(PostProfileImg);
         PostProfile.Controls.Add(PostAuthor);
         PostProfile.Controls.Add(PostTimestamp);
